@@ -31,26 +31,28 @@ def encode_prompt(prompt: str):
     )
 
 def generate_response(prompt: str, max_new_tokens: int = 64):
+    print(f"Input >>>: {prompt}")
     inputs = encode_prompt(prompt)
-    print(f">>> Input: {prompt}")
-    device = next(model.parameters()).device
-    batch = inputs["input_ids"].shape
-    inputs = {k: v.to(device) for k, v in inputs.items()}
-
-    # compute absolute max_length = input_length + new tokens
-    input_len = inputs["input_ids"].shape[-1]
-    max_length = input_len + max_new_tokens
+    input_ids = inputs["input_ids"].to(model.device)
+    attention_mask = inputs["attention_mask"].to(model.device)
+    input_len = input_ids.shape[-1]
 
     with torch.no_grad():
         output_ids = model.generate(
-            **inputs,
-            max_length=max_length,
+            input_ids=input_ids,
+            attention_mask=attention_mask,
             max_new_tokens=max_new_tokens,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             do_sample=False,
+            no_repeat_ngram_size=3,
+            repetition_penalty=1.10,
+            temperature=1.0,
+            top_p=1.0
         )
-    
-    response = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-    print(f"<<< Output: {response}")
+
+    gen_ids = output_ids[0][input_len:]
+    response = tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
+    print(f"Output <<<: {response}")
     return response
+

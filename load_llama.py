@@ -7,7 +7,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from huggingface_hub import login
 
 hf_token = utilities.authentication.get_hf_token()
-MODEL_NAME = "meta-llama/Llama-3.1-8B"
+MODEL_NAME = "meta-llama/Llama-3.2-3B"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(
@@ -32,6 +32,7 @@ def encode_prompt(prompt: str):
 
 def generate_response(prompt: str, max_new_tokens: int = 64):
     inputs = encode_prompt(prompt)
+    print(f">>> Input: {prompt}")
     device = next(model.parameters()).device
     batch = inputs["input_ids"].shape
     inputs = {k: v.to(device) for k, v in inputs.items()}
@@ -44,20 +45,12 @@ def generate_response(prompt: str, max_new_tokens: int = 64):
         output_ids = model.generate(
             **inputs,
             max_length=max_length,
+            max_new_tokens=max_new_tokens,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             do_sample=False,
         )
-
+    
     response = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+    print(f"<<< Output: {response}")
     return response
-
-def main():
-    prompt = "Hello, Llama! How are you today?"
-    print(f">>> Prompt: {prompt}\n")
-
-    response = generate_response(prompt)
-    print(f"<<< Response: {response}\n")
-
-if __name__ == "__main__":
-    main()

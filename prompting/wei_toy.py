@@ -6,11 +6,11 @@ LL_COT_EXAMPLES = [
     {
         "question": 'Take the last letters of the words in "John Smith" and concatenate them.',
         "reasoning": [
-            'The last letter of "Elon" is "n".',
-            'The last letter of "Musk" is "h".',
-            'Concatenating them is "nk".'
+            'The last letter of "John" is "n".',
+            'The last letter of "Smith" is "h".',
+            'Concatenating them is "nh".'
         ],
-        "answer": "nk"
+        "answer": "nh"
     },
     {
         "question": 'Take the last letters of the words in "Larry Page" and concatenate them.',

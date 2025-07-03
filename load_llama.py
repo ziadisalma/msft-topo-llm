@@ -1,15 +1,25 @@
+import os
 import gc
 import torch
-from transformers import LlamaForCausalLM, LlamaTokenizer
+import utilities.authentication
+from pathlib import Path
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from huggingface_hub import login
 
-MODEL_NAME = "meta-llama/Llama-3-7b-chat-hf"
+hf_token = utilities.authentication.get_hf_token()
+MODEL_NAME = "meta-llama/Llama-3.2-3B"
 
-tokenizer = LlamaTokenizer.from_pretrained(MODEL_NAME)
-model = LlamaForCausalLM.from_pretrained(
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     torch_dtype=torch.float16,
-    device_map="auto"
+    device_map="auto",
+    token=hf_token
 )
+
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+    model.config.pad_token_id = tokenizer.eos_token_id
 model.eval()
 
 def encode_prompt(prompt: str):
@@ -21,19 +31,28 @@ def encode_prompt(prompt: str):
     )
 
 def generate_response(prompt: str, max_new_tokens: int = 64):
+    print(f"Input >>>: {prompt}")
     inputs = encode_prompt(prompt)
+    input_ids = inputs["input_ids"].to(model.device)
+    attention_mask = inputs["attention_mask"].to(model.device)
+    input_len = input_ids.shape[-1]
+
     with torch.no_grad():
         output_ids = model.generate(
-            **inputs,
+            input_ids=input_ids,
+            attention_mask=attention_mask,
             max_new_tokens=max_new_tokens,
-            do_sample=False
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
+            do_sample=False,
+            no_repeat_ngram_size=3,
+            repetition_penalty=1.10,
+            temperature=1.0,
+            top_p=1.0
         )
-    # decode into text
-    response = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-    
-    # GPU & Python GC cleanup
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
-    gc.collect()
-    
+
+    gen_ids = output_ids[0][input_len:]
+    response = tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
+    print(f"Output <<<: {response}")
     return response
+

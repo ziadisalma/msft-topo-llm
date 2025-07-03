@@ -21,24 +21,51 @@ def build_trial(previous_action, cue, rule, include_answer=True):
     )
     if include_answer:
         trial += f" {correct}"
-    
     return trial, correct
 
-def make_fewshot_prompt(previous_actions, cues, rules, num_few_shot=3):
+def make_zero_shot_cot(previous_action, cue, rule):
+    trial_text, correct = build_trial(previous_action, cue, rule, include_answer=False)
+    prompt = (
+        "### Task: Decide the next Action according to the Rule.\n"
+        "Let's think step by step:\n\n"
+        f"{trial_text}"
+    )
+    return prompt, correct
+
+def build_trial_with_rationale(previous_action, cue, rule, include_answer=True):
+    trial, correct = build_trial(previous_action, cue, rule, include_answer=False)
+    if rule == 'STAY':
+        rationale = (
+            f"Reasoning: Since the rule is STAY, the next action "
+            f"must be the same as the previous action ({previous_action})."
+        )
+    else:  # SHIFT
+        opposite = 'RIGHT' if previous_action == 'LEFT' else 'LEFT'
+        rationale = (
+            f"Reasoning: Since the rule is SHIFT, we switch from {previous_action} "
+            f"to its opposite, which is {opposite}."
+        )
+    # assemble example
+    example = f"{trial}\n{rationale}\nAnswer? {correct}" if include_answer else f"{trial}\n{rationale}\nAnswer?"
+    return example, correct
+
+def make_fewshot_cot_prompt(previous_actions, cues, rules, num_examples=3):
     combos = list(itertools.product(previous_actions, cues, rules))
     random.shuffle(combos)
-    
-    few_shot = combos[:num_few_shot]
-    query_tuple = combos[num_few_shot]
+    examples = combos[:num_examples]
+    query = combos[num_examples]
     
     prompt_lines = ["### Task: Decide the next Action according to the Rule.\n"]
-    for pa, cue, rule in few_shot:
-        trial_text, _ = build_trial(pa, cue, rule, include_answer=True)
-        prompt_lines.append(trial_text + "\n")
+    prompt_lines.append("Here are a few worked examples with reasoning:\n")
+    # add examples with rationale + answer
+    for pa, cue, rule in examples:
+        ex_text, _ = build_trial_with_rationale(pa, cue, rule, include_answer=True)
+        prompt_lines.append(ex_text + "\n")
     
-    prompt_lines.append("# New trial\n")
-    query_text, correct_answer = build_trial(*query_tuple, include_answer=False)
-    prompt_lines.append(query_text)
+    # now the new trial, without answer
+    prompt_lines.append("### Now you try, and show your reasoning:\n")
+    q_text, correct = build_trial_with_rationale(*query, include_answer=False)
+    prompt_lines.append(q_text)
     
-    prompt = "\n".join(prompt_lines)
-    return prompt, correct_answer, query_tuple
+    full_prompt = "\n".join(prompt_lines)
+    return full_prompt, correct

@@ -1,58 +1,71 @@
 import os
 import gc
 import torch
-import utilities.authentication
-from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from huggingface_hub import login
+import utilities.authentication
 
 hf_token = utilities.authentication.get_hf_token()
-MODEL_NAME = "meta-llama/Llama-3.2-3B"
+login(token=hf_token)
+
+MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+torch_dtype = torch.bfloat16
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    torch_dtype=torch.float16,
-    device_map="auto",
-    token=hf_token
+    torch_dtype=torch_dtype,
+    device_map="auto"
 )
 
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
-    model.config.pad_token_id = tokenizer.eos_token_id
-model.eval()
+def generate_response(system_prompt, user_prompt, max_new_tokens = 512) -> str:
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
 
-def encode_prompt(prompt: str):
-    return tokenizer(
-        prompt,
-        return_tensors="pt",
-        padding=True,
-        truncation=True
+    prompt_with_template = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
     )
 
-def generate_response(prompt: str, max_new_tokens: int = 64):
-    print(f"Input >>>: {prompt}")
-    inputs = encode_prompt(prompt)
-    input_ids = inputs["input_ids"].to(model.device)
-    attention_mask = inputs["attention_mask"].to(model.device)
-    input_len = input_ids.shape[-1]
+    inputs = tokenizer(prompt_with_template, return_tensors="pt").to(model.device)
+    eos_token_id = tokenizer.eos_token_id
 
     with torch.no_grad():
-        output_ids = model.generate(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
+        outputs = model.generate(
+            **inputs,
             max_new_tokens=max_new_tokens,
-            eos_token_id=tokenizer.eos_token_id,
-            pad_token_id=tokenizer.eos_token_id,
-            do_sample=False,
-            no_repeat_ngram_size=3,
-            repetition_penalty=1.10,
-            temperature=1.0,
-            top_p=1.0
+            eos_token_id=eos_token_id,
+            do_sample=True,
+            temperature=0.6,
+            top_p=0.9,
         )
 
-    gen_ids = output_ids[0][input_len:]
-    response = tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
-    print(f"Output <<<: {response}")
+    response_ids = outputs[0][inputs['input_ids'].shape[-1]:]
+    response = tokenizer.decode(response_ids, skip_special_tokens=True)
+
+    del outputs
+    del response_ids
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    gc.collect()
+
     return response
 
+if __name__ == "__main__":
+    system_prompt = "You are a helpful AI assistant."
+    user_prompt = "What is the capital of France and why is it famous?"
+
+    print("Generating response...")
+    model_response = generate_response(system_prompt, user_prompt)
+    print("\n--- Model Response ---")
+    print(model_response)
+    print("----------------------\n")
+
+    del model
+    del tokenizer
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()

@@ -10,18 +10,13 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     torch_dtype=torch_dtype,
-    device_map="auto"
+    device_map="auto",
+    attn_implementation="eager"
 )
 
-# Enable capturing attentions and configure cache behavior
-tokenizer.pad_token_id = tokenizer.eos_token_id
 model.config.output_attentions = True
 model.config.use_cache = True
-# Prefer eager attention implementation if available
-try:
-    model.config.attn_implementation = "eager"
-except Exception:
-    pass
+tokenizer.pad_token_id = tokenizer.eos_token_id
 
 def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperature=0.6, top_p=0.9):
     messages = [

@@ -13,7 +13,17 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
-def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperature=0.6, top_p=0.9) -> str:
+# Enable capturing attentions and configure cache behavior
+tokenizer.pad_token_id = tokenizer.eos_token_id
+model.config.output_attentions = True
+model.config.use_cache = True
+# Prefer eager attention implementation if available
+try:
+    model.config.attn_implementation = "eager"
+except Exception:
+    pass
+
+def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperature=0.6, top_p=0.9):
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
@@ -49,7 +59,6 @@ def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperatur
     gc.collect()
 
     return response
-
 
 def extract_token_embeddings(text, tokens=None, layers=None, as_numpy=True):
     inputs = tokenizer(text, return_tensors="pt").to(model.device)

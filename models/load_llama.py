@@ -13,7 +13,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
-def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperature=0.6, top_p=0.9):
+def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperature=0.6, top_p=0.9) -> str:
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
@@ -50,6 +50,7 @@ def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperatur
 
     return response
 
+
 def extract_token_embeddings(text, tokens=None, layers=None, as_numpy=True):
     inputs = tokenizer(text, return_tensors="pt").to(model.device)
 
@@ -76,7 +77,8 @@ def extract_token_embeddings(text, tokens=None, layers=None, as_numpy=True):
         layer_hs = hidden_states[l][0]  # shape: (seq_len, hidden_size)
         selected = layer_hs[positions]  # shape: (len(positions), hidden_size)
         if as_numpy:
-            selected = selected.cpu().numpy()
+            # cast bfloat16 to float32 for numpy conversion
+            selected = selected.to(torch.float32).cpu().numpy()
         embeddings[l] = {
             'tokens': [seq_tokens[i] for i in positions],
             'positions': positions,

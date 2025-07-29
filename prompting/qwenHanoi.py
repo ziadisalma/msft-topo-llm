@@ -1,6 +1,8 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "Qwen/Qwen2.5-7B-Instruct-1M"
+models = ["Qwen/Qwen2.5-7B-Instruct-1M", "Qwen/Qwen3-8B"] 
+
+model_name = models[0]
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -123,7 +125,7 @@ B = []
 C = [0,1, 2, 3, 4]
 """]
 
-prompt = start[1] + """Give me the sequence of moves to solve the puzzle from the
+prompt = start[0] + """Give me the sequence of moves to solve the puzzle from the
 starting configuration, updating the lists after each move.
 Please try to use as few moves as possible, and make sure to
 follow the rules listed above.  Please limit your answer to a

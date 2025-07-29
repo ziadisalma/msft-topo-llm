@@ -1,0 +1,4 @@
+1) Given three lists, A, B, and C, where only the largest element in each list can be moved to another list, and an element can only be added to a list if it is larger than all other elements in the list, determine if all elements of list A can be moved to list C in 5 moves?
+Only answer "Yes" or "No".
+The lists are: A = [1, 2, 3], B = [] and C = [].
+Answer:

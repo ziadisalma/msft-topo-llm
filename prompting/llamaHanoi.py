@@ -1,10 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForVision2Seq
 import torch
 
-models = ["microsoft/phi-4", "meta-llama/Meta-Llama-3-8B-Instruct", "Qwen/Qwen2-7B-Instruct"]
-model_id = models[2]
+models = ["microsoft/phi-4", "meta-llama/Meta-Llama-3-8B-Instruct", "microsoft/Phi-4-reasoning"]
+model_id = models[1]
 
-tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
     torch_dtype=torch.bfloat16,
@@ -203,14 +203,16 @@ C = [0,1, 2, 3, 4]
 problem = start[0] + """Give me the sequence of moves to solve the puzzle from the
 starting configuration, updating the lists after each move.
 Please try to use as few moves as possible, and make sure to
-follow the rules listed above.  Please limit your answer to a
+follow Rule #1 and Rule #2.  Please limit your answer to a
 maximum of 15 `steps.
 
 Please format your answer as below:
 Step 1.  Move <N> from <src> to <tgt>.
 A = []
 B = []
-C = []"""
+C = []
+
+Use minimal reasoning to reach the answer quickly."""
 
 messages = [
     {"role": "system", "content": prompt},
@@ -231,7 +233,7 @@ terminators = [
 for i in range(0,10):
     outputs = model.generate(
         input_ids,
-        max_new_tokens=512,
+        max_new_tokens=2048,
         eos_token_id=terminators,
         do_sample=True,
         temperature=0.6,

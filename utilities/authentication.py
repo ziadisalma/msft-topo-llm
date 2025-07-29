@@ -2,6 +2,10 @@ import os
 import subprocess
 from pathlib import Path
 
+"""
+This is a simple tool to enable scripts to recieve HF_TOKEN, assuming it is stored in .huggingface/HF_TOKEN relative to the repo.
+"""
+
 def find_repo_root(start = None):
     start = (start or Path(__file__)).resolve()
     for p in [start, *start.parents]:
@@ -21,7 +25,6 @@ def find_repo_root(start = None):
 def get_hf_token():
     repo_root = find_repo_root()
     token_file = os.path.join(repo_root.parent, ".huggingface", "HF_TOKEN")
-
     hf_token = os.environ.get("HF_TOKEN")
     if not hf_token:
         try:

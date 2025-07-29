@@ -1,4 +1,0 @@
-1) Given a description of a set of rooms, determine if someone can get to W from the lobby? 
-Only answer "Yes" or "No". 
-The description is: From the hotel lobby, there are various rooms denoted by letter names. The lobby connects to O, which connects to W and Q. The lobby also connects to G, which connects to V and M. 
-Answer:

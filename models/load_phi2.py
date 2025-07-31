@@ -26,9 +26,7 @@ def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, tempe
     ]
 
     prompt_with_template = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True, # appends "<|im_start|>assistant<|im_sep|>"
+        messages, tokenize=False, add_generation_prompt=True
     )
 
     inputs = tokenizer(prompt_with_template, return_tensors="pt").to(model.device)
@@ -46,10 +44,8 @@ def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, tempe
 
     prev_cache_setting = model.config.use_cache
     model.config.use_cache = False
-
     with torch.no_grad():
         outputs = model(output_ids.unsqueeze(0), return_dict=True)
-
     model.config.use_cache = prev_cache_setting
 
     response_ids = output_ids[prompt_len:]
@@ -59,12 +55,63 @@ def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, tempe
     embeddings = outputs.hidden_states
 
     # cleanup
-    del outputs, response_ids, output_ids, inputs
+    del outputs, response_ids, inputs
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
     gc.collect()
 
-    return response_text, attentions, embeddings
+    return response_text, attentions, embeddings, output_ids
+
+def process_embeddings(embeddings, output_ids, tokenizer, target_tokens, layers=None, as_numpy=True):
+    seq_tokens = tokenizer.convert_ids_to_tokens(output_ids)
+    positions = [i for i, t in enumerate(seq_tokens) if t in target_tokens]
+    if not positions: return {}
+
+    total_layers = len(embeddings) - 1
+    layer_indices = layers if layers is not None else list(range(1, total_layers + 1))
+
+    processed_embs = {}
+    for l in layer_indices:
+        if l < 1 or l >= len(embeddings): continue
+        
+        layer_hs = embeddings[l][0] # (seq_len, hidden_size)
+        selected = layer_hs[positions]
+        if as_numpy:
+            selected = selected.to(torch.float32).cpu().numpy()
+            
+        processed_embs[l] = {
+            'tokens': [seq_tokens[i] for i in positions],
+            'positions': positions,
+            'embeddings': selected
+        }
+    return processed_embs
+
+def process_attentions(attentions, output_ids, tokenizer, target_tokens, query_position=-1, layers=None, head_average=True, as_numpy=True):
+    seq_tokens = tokenizer.convert_ids_to_tokens(output_ids)
+    key_positions = [i for i, t in enumerate(seq_tokens) if t in target_tokens]
+    if not key_positions: return {}
+
+    total_layers = len(attentions)
+    layer_indices = layers if layers is not None else list(range(1, total_layers + 1))
+    
+    processed_attns = {}
+    for l in layer_indices:
+        if l < 1 or l > total_layers: continue
+
+        layer_attn = attentions[l-1][0] # Use l-1 for 0-based tensor index
+        vec = layer_attn[:, query_position, key_positions] # (heads, key_positions)
+        if head_average:
+            vec = vec.mean(dim=0)
+        if as_numpy:
+            vec = vec.to(torch.float32).cpu().numpy()
+
+        processed_attns[l] = {
+            'query_token': seq_tokens[query_position],
+            'key_tokens': [seq_tokens[i] for i in key_positions],
+            'scores': vec
+        }
+    return processed_attns
+
 
 if __name__ == "__main__":
     if not torch.cuda.is_available():
@@ -73,26 +120,31 @@ if __name__ == "__main__":
     sys_prompt  = "You are a concise, knowledgeable assistant."
     user_prompt = "Explain the difference between a list and a tuple in Python in two sentences."
 
-    # Generate the response and extract outputs in a single, efficient call
-    reply, attentions, embeddings = generate_with_outputs(
+    # 1. Generate response and get raw outputs in one efficient call
+    reply, attentions, embeddings, output_ids = generate_with_outputs(
         sys_prompt,
         user_prompt,
         max_new_tokens=128,
     )
 
-    print(f"System prompt: {sys_prompt}\nUser prompt: {user_prompt}\nAssistant reply: {reply}\n")
+    print(f"System prompt: {sys_prompt}\nUser prompt: {user_prompt}\nAssistant reply: {reply}")
 
-    # The 'embeddings' tuple contains the hidden states from each layer, plus the initial input embeddings.
-    # The length is num_layers + 1.
-    print(f"Extracted {len(embeddings)} embedding tensors (1 for input + {len(embeddings)-1} for layers).")
-    
-    # Shape: (batch_size=1, sequence_length, hidden_size)
-    final_layer_embeddings = embeddings[-1]
-    print(f"Shape of final layer embeddings: {final_layer_embeddings.shape}")
+    TARGETS = ['Ġlist', 'Ġlists', 'Ġtuple', 'Ġtuples']
 
-    # The length is num_layers.
-    print(f"Extracted {len(attentions)} attention tensors (1 for each layer).")
-    
-    # Shape: (batch_size=1, num_heads, sequence_length, sequence_length)
-    first_layer_attentions = attentions[0]
-    print(f"Shape of first layer attentions: {first_layer_attentions.shape}")
+    specific_embeddings = process_embeddings(
+        embeddings, output_ids, tokenizer,
+        target_tokens=TARGETS,
+        layers=[1, 16, 32], # Example layers
+    )
+    for layer, info in specific_embeddings.items():
+        print(f"  Layer {layer}: Found tokens {info['tokens']} at positions {info['positions']}. Embedding shape: {info['embeddings'].shape}")
+
+    specific_attentions = process_attentions(
+        attentions, output_ids, tokenizer,
+        target_tokens=TARGETS,
+        query_position=-1, # -1 means the very last token
+        layers=[1, 16, 32],
+    )
+    for layer, info in specific_attentions.items():
+        print(f"  Layer {layer}: Attention from final token ('{info['query_token']}') to {info['key_tokens']}:")
+        print(f"    Scores: {info['scores']}")

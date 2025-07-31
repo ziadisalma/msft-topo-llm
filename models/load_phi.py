@@ -33,7 +33,7 @@ def denormalize_token_list(tokenizer, words):
 def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, temperature=0.6, top_p=0.9):
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_prompt},
+        {"role": "user",   "content": user_prompt},
     ]
 
     prompt_with_template = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
@@ -41,24 +41,23 @@ def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, tempe
     prompt_len = inputs["input_ids"].shape[-1]
 
     with torch.no_grad():
-        output_ids = model.generate(
+        outputs = model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
             eos_token_id=tokenizer.eos_token_id,
             do_sample=True,
             temperature=temperature,
             top_p=top_p,
-        )[0]
+            output_attentions=True,
+            output_hidden_states=True,
+            return_dict_in_generate=True,
+        )
 
-    prev_cache_setting = model.config.use_cache
-    model.config.use_cache = False
-    with torch.no_grad():
-        outputs = model(output_ids.unsqueeze(0), return_dict=True)
-    model.config.use_cache = prev_cache_setting
-
+    output_ids = outputs.sequences[0]
     response_ids = output_ids[prompt_len:]
     response_text = tokenizer.decode(response_ids, skip_special_tokens=True)
     
+    # Attentions and hidden states are directly available from the generate output
     attentions = outputs.attentions
     embeddings = outputs.hidden_states
 

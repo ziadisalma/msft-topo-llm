@@ -1,34 +1,20 @@
+import torch
+from transformers import AutoModel, AutoTokenizer
+from sklearn.decomposition import PCA
 import numpy as np
 import matplotlib.pyplot as plt
-import umap
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
 
-# --- Configuration ---
+# choose model :)
 models = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "microsoft/phi-4", "Qwen/Qwen2.5-7B-Instruct-1M"]
 model_name =  models[2]
-focus_tokens = ["A", "B", "C", "0", "1", "2"] # , "3"]
-SEED = 42
-PERPLEXITY = 5
+# focus_tokens = ["A", "B", "C", "0", "1", "2"]
+focus_tokens = ["solve", "ascending", "Step", "steps", "minimum"]
 
-title = "(LLaMA 3.1 8B)"
-LAYERS_TO_PLOT = list(range(1, 33))  # Llama-3 has 32 layers
-graph_label = "llama"
+which_model = "llama"
+if model_name == models[1]:
+    which_model = "phi-4"
 
-title = "(LLaMA 3.1 8B)"
-    title = "(PHI-4 14B)"
-    LAYERS_TO_PLOT = list(range(1, 41))  # Phi-4 has 40 layers
-    graph_label = "phi-4"
-elif model_name == models[2]:
-    title = "(QWEN2.5 7B)"
-    LAYERS_TO_PLOT = list(range(1, 29))  # Qwen has 28 layers
-    graph_label = "qwen"
-
-# --- Load model and tokenizer ---
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16, device_map="auto").eval()
-
-# --- Input prompt ---
+# choose prompt :3
 """
 prompt = (
     "Given three lists, A, B, and C, where only the largest element in each list "
@@ -197,97 +183,93 @@ C = []
 """]
 
 prompt = prompts[0]
-
 title_prompt = "No-Shot"
 if prompt == prompts[0]:
     title_prompt = "Few-Shot"
 
-# --- Tokenize ---
-inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-input_ids = inputs["input_ids"]
-tokens = tokenizer.convert_ids_to_tokens(input_ids[0])
+def extract_layer_activations(model, tokenizer, texts, focus_tokens=None, device='cpu'):
+    """Extract hidden states for focus tokens from all layers."""
+    model.to(device)
+    model.eval()
 
-# --- Identify positions of target tokens in tokenized input ---
-def find_token_positions(target_tokens, tokens):
-    positions = {}
-    for target in target_tokens:
-        for idx, tok in enumerate(tokens):
-            if target in tok and target not in positions:
-                positions[target] = idx
-                break
-        if target not in positions:
-            print(f"Warning: Token '{target}' not found in tokenized prompt.")
-    return positions
+    inputs = tokenizer(texts, return_tensors="pt", padding=True, truncation=True).to(device)
 
+    with torch.no_grad():
+        outputs = model(**inputs, output_hidden_states=True)
 
-token_positions = find_token_positions(focus_tokens, tokens)
+    input_ids = inputs["input_ids"][0]
+    tokens = tokenizer.convert_ids_to_tokens(input_ids)
 
-# --- Get hidden states across layers ---
-with torch.no_grad():
-    outputs = model(**inputs, output_hidden_states=True)
-    hidden_states = outputs.hidden_states  # tuple of (layer+1) tensors [batch, seq_len, hidden_dim]
+    # Find positions of focus tokens in tokenized prompt
+    if focus_tokens:
+        focus_indices = []
+        for idx, token in enumerate(tokens):
+            for focus in focus_tokens:
+                if focus.lower() in token.lower():
+                    focus_indices.append(idx)
+        if not focus_indices:
+            print("Warning: No focus tokens found in the input.")
+    else:
+        focus_indices = list(range(len(tokens)))  # fallback: use all
 
-# --- Collect embeddings per layer for each target token ---
-layerwise_embeddings = {token: [] for token in focus_tokens}
+    # Extract activations at focus token positions
+    hidden_states = outputs.hidden_states  # tuple: (layer0, layer1, ..., layerN)
+    selected_activations = []
+    for layer in hidden_states:
+        layer_focus = layer[0, focus_indices, :]  # shape: (num_focus_tokens, hidden_size)
+        selected_activations.append(layer_focus.cpu().numpy())
+    
+    return selected_activations  # List of (num_focus_tokens, hidden_size)
 
-for layer in LAYERS_TO_PLOT:
-    layer_embed = hidden_states[layer][0]  # [seq_len, hidden_dim]
-    for token, pos in token_positions.items():
-        emb = layer_embed[pos].cpu().numpy()
-        layerwise_embeddings[token].append(emb)
+def compute_participation_ratio(layer_activations):
+    """Compute participation ratio from PCA eigenvalues."""
+    pca = PCA()
+    pca.fit(layer_activations)
+    eigenvalues = pca.explained_variance_
+    
+    pr = (np.sum(eigenvalues) ** 2) / np.sum(eigenvalues ** 2)
+    return pr
 
-# --- Flatten and prepare for UMAP ---
-all_embeddings = []
-labels = []
-for token, embs in layerwise_embeddings.items():
-    for l, emb in enumerate(embs):
-        all_embeddings.append(emb)
-        labels.append(f"{token}-L{l+1}")
+def plot_sorted_eigenvalues(layer_activations, which_model, title_prompt):
+    for i, layer in enumerate(layer_activations):
+        pca = PCA()
+        pca.fit(layer)
+        eigenvalues = pca.explained_variance_
+        sorted_eigenvalues = np.sort(eigenvalues)[::-1]
 
-"""
-# --- Run t-SNE ---
-tsne = TSNE(n_components=2, perplexity=PERPLEXITY, random_state=SEED)
-reduced = tsne.fit_transform(np.array(all_embeddings))
-"""
+        plt.figure(figsize=(6, 4))
+        plt.plot(sorted_eigenvalues, marker='o')
+        plt.title(f"Layer {i} PCA Eigenvalues\n{which_model} - {title_prompt}")
+        plt.xlabel("Component")
+        plt.ylabel("Eigenvalue")
+        plt.grid(True)
+        plt.tight_layout()
+        plt.savefig(f"eigenvalues_{which_model}_{title_prompt}_layer{i}.pdf")
+        plt.close()
 
-# --- Run UMAP with cosine distance ---
-umap_reducer = umap.UMAP(
-    n_components=2,
-    metric="cosine",
-    random_state=SEED
-)
-reduced = umap_reducer.fit_transform(np.array(all_embeddings))
+def plot_participation_ratios(prs):
+    plt.figure(figsize=(8, 5))
+    plt.plot(range(len(prs)), prs, marker='o')
+    plt.xlabel("Layer")
+    plt.ylabel("Participation Ratio")
+    plt.title("Participation Ratio vs Layer")
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
 
-# --- Plot ---
-plt.figure(figsize=(10, 8))
-colors = {
-    "A": "red",
-    "B": "blue",
-    "C": "green",
-    "0": "brown",
-    "1": "purple",
-    "2": "orange" # ,
-    #"3": "brown"
-}
+def main():
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModel.from_pretrained(model_name, output_hidden_states=True)
 
-for token in focus_tokens:
-    xs, ys = [], []
-    for i, label in enumerate(labels):
-        if label.startswith(token):
-            xs.append(reduced[i][0])
-            ys.append(reduced[i][1])
-    plt.plot(xs, ys, marker='o', color=colors[token], label=token)
-    for i in range(len(xs)):
-        if i == len(xs) - 1:
-            plt.text(xs[i] + 0.5, ys[i], f"{token}", fontsize=10, fontweight='bold')
+    focus = focus_tokens
+    print(f"Using model: {model_name}, Prompt type: {title_prompt}, Focus tokens: {focus}")
 
+    layer_activations = extract_layer_activations(model, tokenizer, prompt, focus_tokens=focus, device=device)
 
-plt.title(f"UMAP of Token Embeddings Across Layers for {title_prompt} prompt {title}", fontsize=15)
-plt.xlabel("UMAP Dimension 1")
-plt.ylabel("UMAP Dimension 2")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+    # Plot PCA eigenvalues for each layer using focus tokens only
+    plot_sorted_eigenvalues(layer_activations, which_model, title_prompt)
+    plt.savefig(f"pca_eig_{which_model}_{title_prompt}.pdf")
 
-plt.savefig(f"umap_{graph_label}_{title_prompt}.pdf")
+if __name__ == "__main__":
+    main()

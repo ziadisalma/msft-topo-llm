@@ -4,12 +4,11 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 MODEL_NAME = "microsoft/phi-4"
-torch_dtype = torch.bfloat16
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    torch_dtype=torch_dtype,
+    torch_dtype="auto",
     device_map="auto",
     attn_implementation="eager",
 )
@@ -34,7 +33,7 @@ def denormalize_token_list(tokenizer, words):
 def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, temperature=0.6, top_p=0.9):
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user",   "content": user_prompt},
+        {"role": "user", "content": user_prompt},
     ]
 
     prompt_with_template = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)

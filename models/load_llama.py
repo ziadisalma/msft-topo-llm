@@ -11,165 +11,115 @@ model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     torch_dtype=torch_dtype,
     device_map="auto",
-    attn_implementation="eager"
+    attn_implementation="eager",
 )
 
 model.config.output_attentions = True
+model.config.output_hidden_states = True
 model.config.use_cache = True
-tokenizer.pad_token_id = tokenizer.eos_token_id
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+    model.config.pad_token_id = model.config.eos_token_id
 
-def generate_response(system_prompt, user_prompt, max_new_tokens=512, temperature=0.6, top_p=0.9):
+def denormalize_token_list(tokenizer, words):
+    denormalized_tokens = []
+    for word in words:
+        # Tokenize the word with a preceding space to get the internal representation.
+        # We take the first result as words can sometimes be split into multiple tokens.
+        tokens = tokenizer.tokenize(f" {word}")
+        if tokens:
+            denormalized_tokens.append(tokens[0])
+    return denormalized_tokens
+
+def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, temperature=0.6, top_p=0.9):
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
     ]
 
-    prompt_with_template = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
-
+    prompt_with_template = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(prompt_with_template, return_tensors="pt").to(model.device)
-    eos_token_id = tokenizer.eos_token_id
+    prompt_len = inputs["input_ids"].shape[-1]
 
     with torch.no_grad():
-        outputs = model.generate(
+        output_ids = model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
-            eos_token_id=eos_token_id,
+            eos_token_id=tokenizer.eos_token_id,
             do_sample=True,
             temperature=temperature,
             top_p=top_p,
-        )
+        )[0]
 
-    response_ids = outputs[0][inputs['input_ids'].shape[-1]:]
-    response = tokenizer.decode(response_ids, skip_special_tokens=True)
+    prev_cache_setting = model.config.use_cache
+    model.config.use_cache = False
+    with torch.no_grad():
+        outputs = model(output_ids.unsqueeze(0), return_dict=True)
+    model.config.use_cache = prev_cache_setting
+
+    response_ids = output_ids[prompt_len:]
+    response_text = tokenizer.decode(response_ids, skip_special_tokens=True)
+    
+    attentions = outputs.attentions
+    embeddings = outputs.hidden_states
 
     # cleanup
-    del outputs
-    del response_ids
+    del outputs, response_ids, inputs
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
     gc.collect()
 
-    return response
+    return response_text, attentions, embeddings, output_ids
 
-def extract_token_embeddings(text, tokens=None, layers=None, as_numpy=True):
-    inputs = tokenizer(text, return_tensors="pt").to(model.device)
+def process_embeddings(embeddings, output_ids, tokenizer, target_tokens, layers=None, as_numpy=True):
+    seq_tokens = tokenizer.convert_ids_to_tokens(output_ids)
+    positions = [i for i, t in enumerate(seq_tokens) if t in target_tokens]
+    if not positions: return {}
 
-    # Forward pass to get all hidden states
-    with torch.no_grad():
-        outputs = model(**inputs, output_hidden_states=True, return_dict=True)
-    hidden_states = outputs.hidden_states
-
-    # Determine layers: skip embedding layer at index 0
-    total_layers = len(hidden_states) - 1
+    total_layers = len(embeddings) - 1
     layer_indices = layers if layers is not None else list(range(1, total_layers + 1))
 
-    # Convert input IDs to tokens
-    seq_tokens = tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
-
-    # Determine token positions to extract
-    if tokens is not None:
-        positions = [i for i, t in enumerate(seq_tokens) if t in tokens]
-    else:
-        positions = list(range(len(seq_tokens)))
-
-    embeddings = {}
+    processed_embs = {}
     for l in layer_indices:
-        layer_hs = hidden_states[l][0]  # shape: (seq_len, hidden_size)
-        selected = layer_hs[positions]  # shape: (len(positions), hidden_size)
+        if l < 1 or l >= len(embeddings): continue
+        
+        layer_hs = embeddings[l][0] # (seq_len, hidden_size)
+        selected = layer_hs[positions]
         if as_numpy:
-            # cast bfloat16 to float32 for numpy conversion
             selected = selected.to(torch.float32).cpu().numpy()
-        embeddings[l] = {
+            
+        processed_embs[l] = {
             'tokens': [seq_tokens[i] for i in positions],
             'positions': positions,
             'embeddings': selected
         }
+    return processed_embs
 
-    # cleanup
-    del outputs
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
-    gc.collect()
+def process_attentions(attentions, output_ids, tokenizer, target_tokens, query_position=-1, layers=None, head_average=True, as_numpy=True):
+    seq_tokens = tokenizer.convert_ids_to_tokens(output_ids)
+    key_positions = [i for i, t in enumerate(seq_tokens) if t in target_tokens]
+    if not key_positions: return {}
 
-    return embeddings
+    total_layers = len(attentions)
+    layer_indices = layers if layers is not None else list(range(1, total_layers + 1))
+    
+    processed_attns = {}
+    for l in layer_indices:
+        if l < 1 or l > total_layers: continue
 
-def extract_attention_to_tokens(system_prompt, user_prompt, tokens=None, layers=None, max_new_tokens=1, head_average=True, as_numpy=True):
-    # Build and tokenize chat prompt
-    messages = [
-        {"role": "system", "content": system_prompt},
-        {"role": "user",   "content": user_prompt},
-    ]
-    prompt = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-
-    # Generate answer-token(s)
-    with torch.no_grad():
-        gen_ids = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-            do_sample=False,
-            use_cache=True,
-        )[0]
-    prompt_len = inputs["input_ids"].shape[-1]
-    prompt_ids = gen_ids[:prompt_len]
-    answer_ids = gen_ids[prompt_len:]
-    answer = tokenizer.decode(answer_ids, skip_special_tokens=True).strip()
-
-    # Forward pass over full sequence to capture attentions
-    prev_cache = model.config.use_cache
-    model.config.use_cache = False
-    model.config.output_attentions = True
-    with torch.no_grad():
-        out = model(gen_ids.unsqueeze(0), output_attentions=True, return_dict=True)
-    attn = out.attentions
-    model.config.use_cache = prev_cache
-
-    # Tokens and positions
-    seq_tokens = tokenizer.convert_ids_to_tokens(prompt_ids)
-    if tokens is not None:
-        positions = [i for i, t in enumerate(seq_tokens) if t in tokens]
-    else:
-        positions = list(range(len(seq_tokens)))
-    labels = [seq_tokens[i] for i in positions]
-
-    # Layers
-    total_layers = len(attn)
-    layer_indices = layers if layers is not None else list(range(1, total_layers+1))
-
-    # Build attention map
-    attentions: dict[int, torch.Tensor|np.ndarray] = {}
-    for L in layer_indices:
-        # attn[L-1]: (batch=1, heads, seq, seq)
-        layer_attn = attn[L-1][0]  # heads, seq, seq
+        layer_attn = attentions[l-1][0] # Use l-1 for 0-based tensor index
+        vec = layer_attn[:, query_position, key_positions] # (heads, key_positions)
         if head_average:
-            mean_attn = layer_attn.mean(dim=0)  # seq, seq
-            vec = mean_attn[-1, positions]
-        else:
-            vec = layer_attn[:, -1, positions]  # heads, positions
+            vec = vec.mean(dim=0)
         if as_numpy:
             vec = vec.to(torch.float32).cpu().numpy()
-        attentions[L] = vec
 
-    # cleanup
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
-    gc.collect()
-
-    return {
-        'answer':     answer,
-        'tokens':     labels,
-        'positions':  positions,
-        'layers':     layer_indices,
-        'attentions': attentions,
-    }
+        processed_attns[l] = {
+            'query_token': seq_tokens[query_position],
+            'key_tokens': [seq_tokens[i] for i in key_positions],
+            'scores': vec
+        }
+    return processed_attns
 
 if __name__ == "__main__":
     if not torch.cuda.is_available():
@@ -177,29 +127,31 @@ if __name__ == "__main__":
 
     sys_prompt  = "You are a concise, knowledgeable assistant."
     user_prompt = "Explain the difference between a list and a tuple in Python in two sentences."
-    reply = generate_response(sys_prompt, user_prompt, max_new_tokens=128)
 
-    print(f"System prompt: {sys_prompt}\nUser prompt: {user_prompt}\nAssistant reply: {reply}")
-
-    emb = extract_token_embeddings(
-        reply,
-        tokens=["lists", "tuples"],
-        layers=[1, 2],
-        as_numpy=True,
-    )
-    for layer, info in emb.items():
-        print(f"Layer {layer}: shape {info['embeddings'].shape} for tokens {info['tokens']}")
-    print()
-
-    attn_out = extract_attention_to_tokens(
+    reply, attentions, embeddings, output_ids = generate_with_outputs(
         sys_prompt,
         user_prompt,
-        tokens=["list", "tuple"],
-        layers=[1],
-        max_new_tokens=1,
-        head_average=True,
-        as_numpy=True,
+        max_new_tokens=128,
     )
-    print("Generated token:", attn_out["answer"])
-    for L, vec in attn_out["attentions"].items():
-        print(f"Layer {L} attention vector: {vec}")
+
+    print(f"System prompt: {sys_prompt}\nUser prompt: {user_prompt}\nAssistant reply: {reply}")
+    
+    TARGETS = denormalize_token_list(tokenizer, ['list', 'lists', 'tuple', 'tuples'])
+
+    specific_embeddings = process_embeddings(
+        embeddings, output_ids, tokenizer,
+        target_tokens=TARGETS,
+        layers=[1, 16, 32], # Example layers
+    )
+    for layer, info in specific_embeddings.items():
+        print(f"  Layer {layer}: Found tokens {info['tokens']} at positions {info['positions']}. Embedding shape: {info['embeddings'].shape}")
+
+    specific_attentions = process_attentions(
+        attentions, output_ids, tokenizer,
+        target_tokens=TARGETS,
+        query_position=-1, # -1 means the very last token
+        layers=[1, 16, 32],
+    )
+    for layer, info in specific_attentions.items():
+        print(f"  Layer {layer}: Attention from final token ('{info['query_token']}') to {info['key_tokens']}:")
+        print(f"    Scores: {info['scores']}")

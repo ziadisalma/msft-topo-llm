@@ -33,36 +33,38 @@ def denormalize_token_list(tokenizer, words):
 def generate_with_outputs(system_prompt, user_prompt, max_new_tokens=1024, temperature=0.6, top_p=0.9):
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user",   "content": user_prompt},
+        {"role": "user", "content": user_prompt},
     ]
 
     prompt_with_template = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(prompt_with_template, return_tensors="pt").to(model.device)
     prompt_len = inputs["input_ids"].shape[-1]
 
+    output_ids = model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        eos_token_id=tokenizer.eos_token_id,
+        do_sample=True,
+        temperature=temperature,
+        top_p=top_p,
+    )[0] # We only need the token IDs from this step
+
+    # Perform a single forward pass on the complete sequence to get correctly formatted attentions and hidden states
     with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-            eos_token_id=tokenizer.eos_token_id,
-            do_sample=True,
-            temperature=temperature,
-            top_p=top_p,
-            output_attentions=True,
-            output_hidden_states=True,
-            return_dict_in_generate=True,
+        full_outputs = model(
+            output_ids.unsqueeze(0), 
+            output_attentions=True, 
+            output_hidden_states=True
         )
 
-    output_ids = outputs.sequences[0]
+    attentions = full_outputs.attentions
+    embeddings = full_outputs.hidden_states
+    
     response_ids = output_ids[prompt_len:]
     response_text = tokenizer.decode(response_ids, skip_special_tokens=True)
-    
-    # Attentions and hidden states are directly available from the generate output
-    attentions = outputs.attentions
-    embeddings = outputs.hidden_states
 
     # cleanup
-    del outputs, response_ids, inputs
+    del response_ids, inputs, full_outputs
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
     gc.collect()

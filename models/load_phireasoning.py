@@ -20,6 +20,22 @@ if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     model.config.pad_token_id = model.config.eos_token_id
 
+def parse_reasoning_output(raw_text):
+    think_start_tag = "<think>"
+    think_end_tag = "</think>"
+    
+    try:
+        start_index = raw_text.find(think_start_tag) + len(think_start_tag)
+        end_index = raw_text.find(think_end_tag)
+
+        if start_index > -1 and end_index > start_index:
+            thought = raw_text[start_index:end_index].strip()
+            solution = raw_text[end_index + len(think_end_tag):].strip()
+            return thought, solution
+    except Exception:
+        pass
+    return "", raw_text.strip()
+
 def denormalize_token_list(tokenizer, words):
     denormalized_tokens = []
     for word in words:
@@ -134,8 +150,16 @@ if __name__ == "__main__":
         top_k=50
     )
 
-    print(f"System prompt: {sys_prompt}\n\nUser prompt: {user_prompt}\n\nAssistant reply:\n{reply}")
+    thought_process, final_solution = parse_reasoning_output(reply)
+
+    print(f"System prompt: {sys_prompt}\n\nUser prompt: {user_prompt}\n")
     
+    print("--- Thought Process ---")
+    print(thought_process)
+    
+    print("\n--- Final Solution ---")
+    print(final_solution)
+
     TARGETS = denormalize_token_list(tokenizer, ['list', 'lists', 'tuple', 'tuples', 'mutable', 'immutable'])
 
     specific_embeddings = process_embeddings(

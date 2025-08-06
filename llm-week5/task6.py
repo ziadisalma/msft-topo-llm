@@ -9,10 +9,10 @@ import torch
 from itertools import combinations
 
 # -------- config --------
-NUM_TRIALS, MIN_NODES, MAX_NODES, EXTRA_EDGES = 1, 6, 10, 3
+NUM_TRIALS, MIN_NODES, MAX_NODES, EXTRA_EDGES = 100, 6, 10, 3
 WEIGHT_LO, WEIGHT_HI = 1, 25
 RUN_MODEL = True            # flip True if you want to query a model
-MODEL_NAME, TEMPERATURE = "microsoft/Phi-4-reasoning", 0.8
+MODEL_NAME, TEMPERATURE = "microsoft/Phi-4", 0.8
 # ------------------------
 
 def canon(u, v):

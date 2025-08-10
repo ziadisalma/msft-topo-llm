@@ -1,402 +1,402 @@
 [
   {
-    "input": "40 vs 77",
-    "output": "2"
+    "input": "[40: 96 vs 77: 73]",
+    "output": "40"
   },
   {
-    "input": "96 vs 73",
-    "output": "1"
+    "input": "[37: 16 vs 57: 60]",
+    "output": "57"
   },
   {
-    "input": "37 vs 57",
-    "output": "2"
+    "input": "[89: 90 vs 39: 52]",
+    "output": "89"
   },
   {
-    "input": "16 vs 60",
-    "output": "2"
+    "input": "[35: 70 vs 65: 64]",
+    "output": "35"
   },
   {
-    "input": "89 vs 39",
-    "output": "1"
+    "input": "[57: 77 vs 11: 6]",
+    "output": "57"
   },
   {
-    "input": "90 vs 52",
-    "output": "1"
+    "input": "[56: 42 vs 95: 78]",
+    "output": "95"
   },
   {
-    "input": "35 vs 65",
-    "output": "2"
+    "input": "[33: 12 vs 4: 30]",
+    "output": "4"
   },
   {
-    "input": "70 vs 64",
-    "output": "1"
+    "input": "[87: 76 vs 74: 3]",
+    "output": "87"
   },
   {
-    "input": "57 vs 11",
-    "output": "1"
+    "input": "[98: 35 vs 87: 74]",
+    "output": "87"
   },
   {
-    "input": "77 vs 6",
-    "output": "1"
+    "input": "[6: 97 vs 98: 23]",
+    "output": "6"
   },
   {
-    "input": "56 vs 95",
-    "output": "2"
+    "input": "[61: 84 vs 67: 57]",
+    "output": "61"
   },
   {
-    "input": "42 vs 78",
-    "output": "2"
+    "input": "[36: 75 vs 24: 56]",
+    "output": "36"
   },
   {
-    "input": "33 vs 4",
-    "output": "1"
+    "input": "[82: 12 vs 63: 61]",
+    "output": "63"
   },
   {
-    "input": "12 vs 30",
-    "output": "2"
+    "input": "[45: 43 vs 53: 42]",
+    "output": "45"
   },
   {
-    "input": "87 vs 74",
-    "output": "1"
+    "input": "[86: 21 vs 14: 43]",
+    "output": "14"
   },
   {
-    "input": "76 vs 3",
-    "output": "1"
+    "input": "[53: 64 vs 89: 37]",
+    "output": "53"
   },
   {
-    "input": "98 vs 87",
-    "output": "1"
+    "input": "[85: 98 vs 52: 71]",
+    "output": "85"
   },
   {
-    "input": "35 vs 74",
-    "output": "2"
+    "input": "[5: 12 vs 59: 41]",
+    "output": "59"
   },
   {
-    "input": "6 vs 98",
-    "output": "2"
+    "input": "[33: 15 vs 42: 99]",
+    "output": "42"
   },
   {
-    "input": "97 vs 23",
-    "output": "1"
+    "input": "[52: 1 vs 66: 85]",
+    "output": "66"
   },
   {
-    "input": "61 vs 67",
-    "output": "2"
+    "input": "[70: 53 vs 60: 7]",
+    "output": "70"
   },
   {
-    "input": "84 vs 57",
-    "output": "1"
+    "input": "[25: 47 vs 67: 80]",
+    "output": "67"
   },
   {
-    "input": "36 vs 24",
-    "output": "1"
+    "input": "[97: 81 vs 64: 57]",
+    "output": "97"
   },
   {
-    "input": "75 vs 56",
-    "output": "1"
+    "input": "[98: 27 vs 7: 35]",
+    "output": "7"
   },
   {
-    "input": "82 vs 63",
-    "output": "1"
+    "input": "[71: 37 vs 17: 57]",
+    "output": "17"
   },
   {
-    "input": "12 vs 61",
-    "output": "2"
+    "input": "[90: 16 vs 63: 4]",
+    "output": "90"
   },
   {
-    "input": "45 vs 53",
-    "output": "2"
+    "input": "[81: 31 vs 78: 91]",
+    "output": "78"
   },
   {
-    "input": "43 vs 42",
-    "output": "1"
+    "input": "[21: 71 vs 40: 2]",
+    "output": "21"
   },
   {
-    "input": "86 vs 14",
-    "output": "1"
+    "input": "[71: 12 vs 53: 29]",
+    "output": "53"
   },
   {
-    "input": "21 vs 43",
-    "output": "2"
+    "input": "[15: 16 vs 60: 83]",
+    "output": "60"
   },
   {
-    "input": "53 vs 89",
-    "output": "2"
+    "input": "[20: 92 vs 64: 38]",
+    "output": "20"
   },
   {
-    "input": "64 vs 37",
-    "output": "1"
+    "input": "[66: 35 vs 91: 54]",
+    "output": "91"
   },
   {
-    "input": "85 vs 52",
-    "output": "1"
+    "input": "[62: 32 vs 61: 59]",
+    "output": "61"
   },
   {
-    "input": "98 vs 71",
-    "output": "1"
+    "input": "[71: 50 vs 19: 25]",
+    "output": "71"
   },
   {
-    "input": "5 vs 59",
-    "output": "2"
+    "input": "[77: 96 vs 66: 18]",
+    "output": "77"
   },
   {
-    "input": "12 vs 41",
-    "output": "2"
+    "input": "[9: 99 vs 36: 54]",
+    "output": "9"
   },
   {
-    "input": "33 vs 42",
-    "output": "2"
+    "input": "[44: 35 vs 65: 1]",
+    "output": "44"
   },
   {
-    "input": "15 vs 99",
-    "output": "2"
+    "input": "[37: 39 vs 93: 76]",
+    "output": "93"
   },
   {
-    "input": "52 vs 66",
-    "output": "2"
+    "input": "[75: 63 vs 85: 20]",
+    "output": "75"
   },
   {
-    "input": "1 vs 85",
-    "output": "2"
+    "input": "[58: 62 vs 69: 45]",
+    "output": "58"
   },
   {
-    "input": "70 vs 60",
-    "output": "1"
+    "input": "[43: 98 vs 71: 70]",
+    "output": "43"
   },
   {
-    "input": "53 vs 7",
-    "output": "1"
+    "input": "[49: 42 vs 59: 25]",
+    "output": "49"
   },
   {
-    "input": "25 vs 67",
-    "output": "2"
+    "input": "[90: 74 vs 31: 50]",
+    "output": "90"
   },
   {
-    "input": "47 vs 80",
-    "output": "2"
+    "input": "[30: 6 vs 53: 41]",
+    "output": "53"
   },
   {
-    "input": "97 vs 64",
-    "output": "1"
+    "input": "[96: 91 vs 61: 49]",
+    "output": "96"
   },
   {
-    "input": "81 vs 57",
-    "output": "1"
+    "input": "[50: 84 vs 85: 20]",
+    "output": "50"
   },
   {
-    "input": "98 vs 7",
-    "output": "1"
+    "input": "[64: 17 vs 5: 65]",
+    "output": "5"
   },
   {
-    "input": "27 vs 35",
-    "output": "2"
+    "input": "[76: 13 vs 43: 57]",
+    "output": "43"
   },
   {
-    "input": "71 vs 17",
-    "output": "1"
+    "input": "[13: 59 vs 68: 2]",
+    "output": "13"
   },
   {
-    "input": "37 vs 57",
-    "output": "2"
+    "input": "[93: 53 vs 19: 84]",
+    "output": "19"
   },
   {
-    "input": "90 vs 63",
-    "output": "1"
+    "input": "[20: 61 vs 10: 34]",
+    "output": "20"
   },
   {
-    "input": "16 vs 4",
-    "output": "1"
+    "input": "[44: 89 vs 80: 51]",
+    "output": "44"
   },
   {
-    "input": "81 vs 78",
-    "output": "1"
+    "input": "[84: 43 vs 11: 87]",
+    "output": "11"
   },
   {
-    "input": "31 vs 91",
-    "output": "2"
+    "input": "[69: 41 vs 49: 81]",
+    "output": "49"
   },
   {
-    "input": "21 vs 40",
-    "output": "2"
+    "input": "[92: 63 vs 98: 70]",
+    "output": "98"
   },
   {
-    "input": "71 vs 2",
-    "output": "1"
+    "input": "[5: 9 vs 80: 31]",
+    "output": "80"
   },
   {
-    "input": "71 vs 53",
-    "output": "1"
+    "input": "[81: 37 vs 88: 30]",
+    "output": "81"
   },
   {
-    "input": "12 vs 29",
-    "output": "2"
+    "input": "[96: 56 vs 12: 13]",
+    "output": "96"
   },
   {
-    "input": "15 vs 60",
-    "output": "2"
+    "input": "[98: 91 vs 82: 13]",
+    "output": "98"
   },
   {
-    "input": "16 vs 83",
-    "output": "2"
+    "input": "[57: 89 vs 22: 39]",
+    "output": "57"
   },
   {
-    "input": "20 vs 64",
-    "output": "2"
+    "input": "[4: 42 vs 6: 8]",
+    "output": "4"
   },
   {
-    "input": "92 vs 38",
-    "output": "1"
+    "input": "[38: 48 vs 46: 56]",
+    "output": "46"
   },
   {
-    "input": "66 vs 91",
-    "output": "2"
+    "input": "[19: 68 vs 32: 53]",
+    "output": "19"
   },
   {
-    "input": "35 vs 54",
-    "output": "2"
+    "input": "[73: 24 vs 88: 22]",
+    "output": "73"
   },
   {
-    "input": "62 vs 61",
-    "output": "1"
+    "input": "[23: 79 vs 11: 49]",
+    "output": "23"
   },
   {
-    "input": "32 vs 59",
-    "output": "2"
+    "input": "[80: 31 vs 88: 64]",
+    "output": "88"
   },
   {
-    "input": "71 vs 19",
-    "output": "1"
+    "input": "[75: 30 vs 19: 60]",
+    "output": "19"
   },
   {
-    "input": "50 vs 25",
-    "output": "1"
+    "input": "[82: 59 vs 33: 33]",
+    "output": "82"
   },
   {
-    "input": "77 vs 66",
-    "output": "1"
+    "input": "[86: 60 vs 2: 37]",
+    "output": "86"
   },
   {
-    "input": "96 vs 18",
-    "output": "1"
+    "input": "[87: 21 vs 70: 10]",
+    "output": "87"
   },
   {
-    "input": "9 vs 36",
-    "output": "2"
+    "input": "[57: 76 vs 45: 39]",
+    "output": "57"
   },
   {
-    "input": "99 vs 54",
-    "output": "1"
+    "input": "[82: 89 vs 55: 33]",
+    "output": "82"
   },
   {
-    "input": "44 vs 65",
-    "output": "2"
+    "input": "[59: 26 vs 39: 50]",
+    "output": "39"
   },
   {
-    "input": "35 vs 1",
-    "output": "1"
+    "input": "[62: 31 vs 14: 49]",
+    "output": "14"
   },
   {
-    "input": "37 vs 93",
-    "output": "2"
+    "input": "[74: 74 vs 46: 38]",
+    "output": "74"
   },
   {
-    "input": "39 vs 76",
-    "output": "2"
+    "input": "[90: 3 vs 38: 85]",
+    "output": "38"
   },
   {
-    "input": "75 vs 85",
-    "output": "2"
+    "input": "[51: 2 vs 36: 73]",
+    "output": "36"
   },
   {
-    "input": "63 vs 20",
-    "output": "1"
+    "input": "[88: 7 vs 96: 78]",
+    "output": "96"
   },
   {
-    "input": "58 vs 69",
-    "output": "2"
+    "input": "[96: 37 vs 64: 30]",
+    "output": "96"
   },
   {
-    "input": "62 vs 45",
-    "output": "1"
+    "input": "[78: 29 vs 46: 82]",
+    "output": "46"
   },
   {
-    "input": "43 vs 71",
-    "output": "2"
+    "input": "[25: 33 vs 80: 87]",
+    "output": "80"
   },
   {
-    "input": "98 vs 70",
-    "output": "1"
+    "input": "[97: 99 vs 93: 85]",
+    "output": "97"
   },
   {
-    "input": "49 vs 59",
-    "output": "2"
+    "input": "[88: 81 vs 18: 13]",
+    "output": "88"
   },
   {
-    "input": "42 vs 25",
-    "output": "1"
+    "input": "[81: 6 vs 83: 40]",
+    "output": "83"
   },
   {
-    "input": "90 vs 31",
-    "output": "1"
+    "input": "[57: 75 vs 5: 47]",
+    "output": "57"
   },
   {
-    "input": "74 vs 50",
-    "output": "1"
+    "input": "[94: 12 vs 17: 38]",
+    "output": "17"
   },
   {
-    "input": "30 vs 53",
-    "output": "2"
+    "input": "[42: 54 vs 96: 23]",
+    "output": "42"
   },
   {
-    "input": "6 vs 41",
-    "output": "2"
+    "input": "[26: 70 vs 17: 47]",
+    "output": "26"
   },
   {
-    "input": "96 vs 61",
-    "output": "1"
+    "input": "[68: 35 vs 65: 22]",
+    "output": "68"
   },
   {
-    "input": "91 vs 49",
-    "output": "1"
+    "input": "[33: 38 vs 62: 96]",
+    "output": "62"
   },
   {
-    "input": "50 vs 85",
-    "output": "2"
+    "input": "[44: 60 vs 15: 10]",
+    "output": "44"
   },
   {
-    "input": "84 vs 20",
-    "output": "1"
+    "input": "[19: 29 vs 97: 87]",
+    "output": "97"
   },
   {
-    "input": "64 vs 5",
-    "output": "1"
+    "input": "[93: 51 vs 87: 72]",
+    "output": "87"
   },
   {
-    "input": "17 vs 65",
-    "output": "2"
+    "input": "[47: 51 vs 12: 2]",
+    "output": "47"
   },
   {
-    "input": "76 vs 43",
-    "output": "1"
+    "input": "[34: 16 vs 69: 59]",
+    "output": "69"
   },
   {
-    "input": "13 vs 57",
-    "output": "2"
+    "input": "[48: 96 vs 87: 87]",
+    "output": "48"
   },
   {
-    "input": "13 vs 68",
-    "output": "2"
+    "input": "[34: 49 vs 75: 82]",
+    "output": "75"
   },
   {
-    "input": "59 vs 2",
-    "output": "1"
+    "input": "[48: 87 vs 14: 30]",
+    "output": "48"
   },
   {
-    "input": "93 vs 19",
-    "output": "1"
+    "input": "[61: 80 vs 4: 72]",
+    "output": "61"
   },
   {
-    "input": "53 vs 84",
-    "output": "2"
+    "input": "[42: 29 vs 79: 83]",
+    "output": "79"
   }
 ]

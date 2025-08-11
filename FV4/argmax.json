@@ -1,402 +1,402 @@
 [
   {
-    "input": "[40: 96 vs 77: 73]",
-    "output": "40"
-  },
-  {
-    "input": "[37: 16 vs 57: 60]",
-    "output": "57"
-  },
-  {
-    "input": "[89: 90 vs 39: 52]",
-    "output": "89"
-  },
-  {
-    "input": "[35: 70 vs 65: 64]",
+    "input": "rewards=[7:12 vs 35:99]",
     "output": "35"
   },
   {
-    "input": "[57: 77 vs 11: 6]",
-    "output": "57"
-  },
-  {
-    "input": "[56: 42 vs 95: 78]",
-    "output": "95"
-  },
-  {
-    "input": "[33: 12 vs 4: 30]",
-    "output": "4"
-  },
-  {
-    "input": "[87: 76 vs 74: 3]",
-    "output": "87"
-  },
-  {
-    "input": "[98: 35 vs 87: 74]",
-    "output": "87"
-  },
-  {
-    "input": "[6: 97 vs 98: 23]",
-    "output": "6"
-  },
-  {
-    "input": "[61: 84 vs 67: 57]",
-    "output": "61"
-  },
-  {
-    "input": "[36: 75 vs 24: 56]",
-    "output": "36"
-  },
-  {
-    "input": "[82: 12 vs 63: 61]",
-    "output": "63"
-  },
-  {
-    "input": "[45: 43 vs 53: 42]",
-    "output": "45"
-  },
-  {
-    "input": "[86: 21 vs 14: 43]",
-    "output": "14"
-  },
-  {
-    "input": "[53: 64 vs 89: 37]",
-    "output": "53"
-  },
-  {
-    "input": "[85: 98 vs 52: 71]",
-    "output": "85"
-  },
-  {
-    "input": "[5: 12 vs 59: 41]",
-    "output": "59"
-  },
-  {
-    "input": "[33: 15 vs 42: 99]",
-    "output": "42"
-  },
-  {
-    "input": "[52: 1 vs 66: 85]",
-    "output": "66"
-  },
-  {
-    "input": "[70: 53 vs 60: 7]",
-    "output": "70"
-  },
-  {
-    "input": "[25: 47 vs 67: 80]",
-    "output": "67"
-  },
-  {
-    "input": "[97: 81 vs 64: 57]",
-    "output": "97"
-  },
-  {
-    "input": "[98: 27 vs 7: 35]",
-    "output": "7"
-  },
-  {
-    "input": "[71: 37 vs 17: 57]",
-    "output": "17"
-  },
-  {
-    "input": "[90: 16 vs 63: 4]",
-    "output": "90"
-  },
-  {
-    "input": "[81: 31 vs 78: 91]",
-    "output": "78"
-  },
-  {
-    "input": "[21: 71 vs 40: 2]",
-    "output": "21"
-  },
-  {
-    "input": "[71: 12 vs 53: 29]",
-    "output": "53"
-  },
-  {
-    "input": "[15: 16 vs 60: 83]",
-    "output": "60"
-  },
-  {
-    "input": "[20: 92 vs 64: 38]",
-    "output": "20"
-  },
-  {
-    "input": "[66: 35 vs 91: 54]",
-    "output": "91"
-  },
-  {
-    "input": "[62: 32 vs 61: 59]",
-    "output": "61"
-  },
-  {
-    "input": "[71: 50 vs 19: 25]",
-    "output": "71"
-  },
-  {
-    "input": "[77: 96 vs 66: 18]",
-    "output": "77"
-  },
-  {
-    "input": "[9: 99 vs 36: 54]",
-    "output": "9"
-  },
-  {
-    "input": "[44: 35 vs 65: 1]",
-    "output": "44"
-  },
-  {
-    "input": "[37: 39 vs 93: 76]",
-    "output": "93"
-  },
-  {
-    "input": "[75: 63 vs 85: 20]",
-    "output": "75"
-  },
-  {
-    "input": "[58: 62 vs 69: 45]",
-    "output": "58"
-  },
-  {
-    "input": "[43: 98 vs 71: 70]",
-    "output": "43"
-  },
-  {
-    "input": "[49: 42 vs 59: 25]",
-    "output": "49"
-  },
-  {
-    "input": "[90: 74 vs 31: 50]",
-    "output": "90"
-  },
-  {
-    "input": "[30: 6 vs 53: 41]",
-    "output": "53"
-  },
-  {
-    "input": "[96: 91 vs 61: 49]",
-    "output": "96"
-  },
-  {
-    "input": "[50: 84 vs 85: 20]",
-    "output": "50"
-  },
-  {
-    "input": "[64: 17 vs 5: 65]",
+    "input": "rewards=[5:69 vs 14:49]",
     "output": "5"
   },
   {
-    "input": "[76: 13 vs 43: 57]",
+    "input": "rewards=[44:21 vs 7:18]",
+    "output": "44"
+  },
+  {
+    "input": "rewards=[43:32 vs 90:21]",
     "output": "43"
   },
   {
-    "input": "[13: 59 vs 68: 2]",
-    "output": "13"
+    "input": "rewards=[56:12 vs 100:77]",
+    "output": "100"
   },
   {
-    "input": "[93: 53 vs 19: 84]",
-    "output": "19"
+    "input": "rewards=[1:94 vs 41:58]",
+    "output": "1"
   },
   {
-    "input": "[20: 61 vs 10: 34]",
-    "output": "20"
+    "input": "rewards=[6:86 vs 12:19]",
+    "output": "6"
   },
   {
-    "input": "[44: 89 vs 80: 51]",
-    "output": "44"
-  },
-  {
-    "input": "[84: 43 vs 11: 87]",
-    "output": "11"
-  },
-  {
-    "input": "[69: 41 vs 49: 81]",
-    "output": "49"
-  },
-  {
-    "input": "[92: 63 vs 98: 70]",
-    "output": "98"
-  },
-  {
-    "input": "[5: 9 vs 80: 31]",
-    "output": "80"
-  },
-  {
-    "input": "[81: 37 vs 88: 30]",
-    "output": "81"
-  },
-  {
-    "input": "[96: 56 vs 12: 13]",
-    "output": "96"
-  },
-  {
-    "input": "[98: 91 vs 82: 13]",
-    "output": "98"
-  },
-  {
-    "input": "[57: 89 vs 22: 39]",
-    "output": "57"
-  },
-  {
-    "input": "[4: 42 vs 6: 8]",
-    "output": "4"
-  },
-  {
-    "input": "[38: 48 vs 46: 56]",
-    "output": "46"
-  },
-  {
-    "input": "[19: 68 vs 32: 53]",
-    "output": "19"
-  },
-  {
-    "input": "[73: 24 vs 88: 22]",
-    "output": "73"
-  },
-  {
-    "input": "[23: 79 vs 11: 49]",
-    "output": "23"
-  },
-  {
-    "input": "[80: 31 vs 88: 64]",
-    "output": "88"
-  },
-  {
-    "input": "[75: 30 vs 19: 60]",
-    "output": "19"
-  },
-  {
-    "input": "[82: 59 vs 33: 33]",
-    "output": "82"
-  },
-  {
-    "input": "[86: 60 vs 2: 37]",
-    "output": "86"
-  },
-  {
-    "input": "[87: 21 vs 70: 10]",
-    "output": "87"
-  },
-  {
-    "input": "[57: 76 vs 45: 39]",
-    "output": "57"
-  },
-  {
-    "input": "[82: 89 vs 55: 33]",
-    "output": "82"
-  },
-  {
-    "input": "[59: 26 vs 39: 50]",
-    "output": "39"
-  },
-  {
-    "input": "[62: 31 vs 14: 49]",
-    "output": "14"
-  },
-  {
-    "input": "[74: 74 vs 46: 38]",
-    "output": "74"
-  },
-  {
-    "input": "[90: 3 vs 38: 85]",
+    "input": "rewards=[3:56 vs 38:74]",
     "output": "38"
   },
   {
-    "input": "[51: 2 vs 36: 73]",
-    "output": "36"
-  },
-  {
-    "input": "[88: 7 vs 96: 78]",
-    "output": "96"
-  },
-  {
-    "input": "[96: 37 vs 64: 30]",
-    "output": "96"
-  },
-  {
-    "input": "[78: 29 vs 46: 82]",
-    "output": "46"
-  },
-  {
-    "input": "[25: 33 vs 80: 87]",
-    "output": "80"
-  },
-  {
-    "input": "[97: 99 vs 93: 85]",
-    "output": "97"
-  },
-  {
-    "input": "[88: 81 vs 18: 13]",
-    "output": "88"
-  },
-  {
-    "input": "[81: 6 vs 83: 40]",
-    "output": "83"
-  },
-  {
-    "input": "[57: 75 vs 5: 47]",
-    "output": "57"
-  },
-  {
-    "input": "[94: 12 vs 17: 38]",
-    "output": "17"
-  },
-  {
-    "input": "[42: 54 vs 96: 23]",
-    "output": "42"
-  },
-  {
-    "input": "[26: 70 vs 17: 47]",
-    "output": "26"
-  },
-  {
-    "input": "[68: 35 vs 65: 22]",
-    "output": "68"
-  },
-  {
-    "input": "[33: 38 vs 62: 96]",
-    "output": "62"
-  },
-  {
-    "input": "[44: 60 vs 15: 10]",
-    "output": "44"
-  },
-  {
-    "input": "[19: 29 vs 97: 87]",
-    "output": "97"
-  },
-  {
-    "input": "[93: 51 vs 87: 72]",
-    "output": "87"
-  },
-  {
-    "input": "[47: 51 vs 12: 2]",
-    "output": "47"
-  },
-  {
-    "input": "[34: 16 vs 69: 59]",
-    "output": "69"
-  },
-  {
-    "input": "[48: 96 vs 87: 87]",
-    "output": "48"
-  },
-  {
-    "input": "[34: 49 vs 75: 82]",
-    "output": "75"
-  },
-  {
-    "input": "[48: 87 vs 14: 30]",
-    "output": "48"
-  },
-  {
-    "input": "[61: 80 vs 4: 72]",
+    "input": "rewards=[61:99 vs 5:40]",
     "output": "61"
   },
   {
-    "input": "[42: 29 vs 79: 83]",
-    "output": "79"
+    "input": "rewards=[27:82 vs 62:78]",
+    "output": "27"
+  },
+  {
+    "input": "rewards=[2:99 vs 41:51]",
+    "output": "2"
+  },
+  {
+    "input": "rewards=[88:82 vs 56:69]",
+    "output": "88"
+  },
+  {
+    "input": "rewards=[77:67 vs 63:86]",
+    "output": "63"
+  },
+  {
+    "input": "rewards=[66:97 vs 5:83]",
+    "output": "66"
+  },
+  {
+    "input": "rewards=[11:85 vs 63:34]",
+    "output": "11"
+  },
+  {
+    "input": "rewards=[71:10 vs 44:51]",
+    "output": "44"
+  },
+  {
+    "input": "rewards=[50:100 vs 74:44]",
+    "output": "50"
+  },
+  {
+    "input": "rewards=[76:81 vs 12:47]",
+    "output": "76"
+  },
+  {
+    "input": "rewards=[30:69 vs 46:52]",
+    "output": "30"
+  },
+  {
+    "input": "rewards=[82:64 vs 8:37]",
+    "output": "82"
+  },
+  {
+    "input": "rewards=[81:30 vs 93:70]",
+    "output": "93"
+  },
+  {
+    "input": "rewards=[23:69 vs 20:57]",
+    "output": "23"
+  },
+  {
+    "input": "rewards=[60:2 vs 6:18]",
+    "output": "6"
+  },
+  {
+    "input": "rewards=[3:46 vs 33:88]",
+    "output": "33"
+  },
+  {
+    "input": "rewards=[56:54 vs 82:1]",
+    "output": "56"
+  },
+  {
+    "input": "rewards=[9:46 vs 66:91]",
+    "output": "66"
+  },
+  {
+    "input": "rewards=[56:69 vs 2:49]",
+    "output": "56"
+  },
+  {
+    "input": "rewards=[82:4 vs 89:52]",
+    "output": "89"
+  },
+  {
+    "input": "rewards=[61:97 vs 34:5]",
+    "output": "61"
+  },
+  {
+    "input": "rewards=[45:82 vs 54:4]",
+    "output": "45"
+  },
+  {
+    "input": "rewards=[54:92 vs 21:9]",
+    "output": "54"
+  },
+  {
+    "input": "rewards=[48:31 vs 19:86]",
+    "output": "19"
+  },
+  {
+    "input": "rewards=[81:98 vs 8:67]",
+    "output": "81"
+  },
+  {
+    "input": "rewards=[19:99 vs 40:84]",
+    "output": "19"
+  },
+  {
+    "input": "rewards=[50:17 vs 100:48]",
+    "output": "100"
+  },
+  {
+    "input": "rewards=[44:16 vs 67:81]",
+    "output": "67"
+  },
+  {
+    "input": "rewards=[50:8 vs 76:56]",
+    "output": "76"
+  },
+  {
+    "input": "rewards=[59:3 vs 86:45]",
+    "output": "86"
+  },
+  {
+    "input": "rewards=[95:92 vs 93:86]",
+    "output": "95"
+  },
+  {
+    "input": "rewards=[100:21 vs 55:4]",
+    "output": "100"
+  },
+  {
+    "input": "rewards=[67:72 vs 66:18]",
+    "output": "67"
+  },
+  {
+    "input": "rewards=[14:93 vs 70:48]",
+    "output": "14"
+  },
+  {
+    "input": "rewards=[44:35 vs 73:12]",
+    "output": "44"
+  },
+  {
+    "input": "rewards=[32:42 vs 27:34]",
+    "output": "32"
+  },
+  {
+    "input": "rewards=[11:98 vs 65:26]",
+    "output": "11"
+  },
+  {
+    "input": "rewards=[3:35 vs 25:73]",
+    "output": "25"
+  },
+  {
+    "input": "rewards=[41:44 vs 77:11]",
+    "output": "41"
+  },
+  {
+    "input": "rewards=[69:64 vs 18:62]",
+    "output": "69"
+  },
+  {
+    "input": "rewards=[4:92 vs 100:33]",
+    "output": "4"
+  },
+  {
+    "input": "rewards=[63:51 vs 74:44]",
+    "output": "63"
+  },
+  {
+    "input": "rewards=[65:79 vs 17:82]",
+    "output": "17"
+  },
+  {
+    "input": "rewards=[78:44 vs 77:64]",
+    "output": "77"
+  },
+  {
+    "input": "rewards=[89:47 vs 16:7]",
+    "output": "89"
+  },
+  {
+    "input": "rewards=[47:54 vs 86:41]",
+    "output": "47"
+  },
+  {
+    "input": "rewards=[99:44 vs 58:97]",
+    "output": "58"
+  },
+  {
+    "input": "rewards=[24:8 vs 49:54]",
+    "output": "49"
+  },
+  {
+    "input": "rewards=[34:72 vs 23:49]",
+    "output": "34"
+  },
+  {
+    "input": "rewards=[16:65 vs 38:34]",
+    "output": "16"
+  },
+  {
+    "input": "rewards=[8:7 vs 42:49]",
+    "output": "42"
+  },
+  {
+    "input": "rewards=[14:74 vs 39:60]",
+    "output": "14"
+  },
+  {
+    "input": "rewards=[91:32 vs 42:83]",
+    "output": "42"
+  },
+  {
+    "input": "rewards=[57:74 vs 73:45]",
+    "output": "57"
+  },
+  {
+    "input": "rewards=[59:74 vs 89:65]",
+    "output": "59"
+  },
+  {
+    "input": "rewards=[36:7 vs 44:24]",
+    "output": "44"
+  },
+  {
+    "input": "rewards=[55:64 vs 85:94]",
+    "output": "85"
+  },
+  {
+    "input": "rewards=[69:61 vs 6:70]",
+    "output": "6"
+  },
+  {
+    "input": "rewards=[48:77 vs 29:5]",
+    "output": "48"
+  },
+  {
+    "input": "rewards=[100:91 vs 77:37]",
+    "output": "100"
+  },
+  {
+    "input": "rewards=[2:94 vs 42:50]",
+    "output": "2"
+  },
+  {
+    "input": "rewards=[33:22 vs 9:37]",
+    "output": "9"
+  },
+  {
+    "input": "rewards=[46:6 vs 55:78]",
+    "output": "55"
+  },
+  {
+    "input": "rewards=[87:26 vs 22:6]",
+    "output": "87"
+  },
+  {
+    "input": "rewards=[98:68 vs 22:95]",
+    "output": "22"
+  },
+  {
+    "input": "rewards=[39:60 vs 64:29]",
+    "output": "39"
+  },
+  {
+    "input": "rewards=[14:79 vs 12:57]",
+    "output": "14"
+  },
+  {
+    "input": "rewards=[25:9 vs 36:67]",
+    "output": "36"
+  },
+  {
+    "input": "rewards=[51:58 vs 53:15]",
+    "output": "51"
+  },
+  {
+    "input": "rewards=[56:84 vs 98:67]",
+    "output": "56"
+  },
+  {
+    "input": "rewards=[18:28 vs 64:25]",
+    "output": "18"
+  },
+  {
+    "input": "rewards=[5:27 vs 32:10]",
+    "output": "5"
+  },
+  {
+    "input": "rewards=[4:53 vs 2:84]",
+    "output": "2"
+  },
+  {
+    "input": "rewards=[6:94 vs 4:32]",
+    "output": "6"
+  },
+  {
+    "input": "rewards=[56:38 vs 90:24]",
+    "output": "56"
+  },
+  {
+    "input": "rewards=[37:83 vs 86:42]",
+    "output": "37"
+  },
+  {
+    "input": "rewards=[4:47 vs 96:20]",
+    "output": "4"
+  },
+  {
+    "input": "rewards=[29:85 vs 54:66]",
+    "output": "29"
+  },
+  {
+    "input": "rewards=[51:25 vs 72:50]",
+    "output": "72"
+  },
+  {
+    "input": "rewards=[64:37 vs 6:18]",
+    "output": "64"
+  },
+  {
+    "input": "rewards=[93:17 vs 14:16]",
+    "output": "93"
+  },
+  {
+    "input": "rewards=[46:79 vs 71:3]",
+    "output": "46"
+  },
+  {
+    "input": "rewards=[46:47 vs 37:28]",
+    "output": "46"
+  },
+  {
+    "input": "rewards=[7:66 vs 14:97]",
+    "output": "14"
+  },
+  {
+    "input": "rewards=[42:11 vs 86:95]",
+    "output": "86"
+  },
+  {
+    "input": "rewards=[27:24 vs 50:54]",
+    "output": "50"
+  },
+  {
+    "input": "rewards=[18:21 vs 61:1]",
+    "output": "18"
+  },
+  {
+    "input": "rewards=[12:5 vs 43:13]",
+    "output": "43"
+  },
+  {
+    "input": "rewards=[59:26 vs 56:85]",
+    "output": "56"
+  },
+  {
+    "input": "rewards=[20:60 vs 8:15]",
+    "output": "20"
+  },
+  {
+    "input": "rewards=[18:6 vs 86:46]",
+    "output": "86"
+  },
+  {
+    "input": "rewards=[31:44 vs 27:56]",
+    "output": "27"
   }
 ]

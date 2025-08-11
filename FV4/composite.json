@@ -1,402 +1,402 @@
 [
   {
-    "input": "path1: lobby-42-25-90-31-74. path1-rewards=[74:50 vs 68:84]. path2: lobby-30-100-53-6-41. path2-rewards=[41:85 vs 56:20].",
-    "output": "41"
+    "input": "P: lobby-98-54-6-34-66. P-rewards=[66:18 vs 29:18]. S: lobby-52-39-62-46-75. S-rewards=[74:97 vs 75:37].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-13-57-68-59. path1-rewards=[59:20 vs 55:61]. path2: lobby-93-19. path2-rewards=[90:34 vs 19:10].",
-    "output": "59"
+    "input": "P: lobby-40-13-94. P-rewards=[64:56 vs 94:13]. S: lobby-88-43. S-rewards=[76:41 vs 43:46].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-43-87. path1-rewards=[73:31 vs 87:80]. path2: lobby-41-81-92-98-63. path2-rewards=[63:9 vs 5:81].",
-    "output": "87"
+    "input": "P: lobby-57-67-34-8-71. P-rewards=[71:86 vs 55:1]. S: lobby-12-93. S-rewards=[99:79 vs 93:81].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-4-95. path1-rewards=[95:95 vs 15:12]. path2: lobby-32-29-18-95. path2-rewards=[95:70 vs 92:76].",
-    "output": "95"
+    "input": "P: lobby-94-42-91. P-rewards=[91:19 vs 30:58]. S: lobby-25-73. S-rewards=[73:70 vs 33:12].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-98-21. path1-rewards=[49:13 vs 21:12]. path2: lobby-44-36-20-28-98. path2-rewards=[14:46 vs 98:49].",
-    "output": "98"
+    "input": "P: lobby-14-39-71-38-91. P-rewards=[91:78 vs 75:76]. S: lobby-71-43. S-rewards=[28:37 vs 43:71].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-30-65-78. path1-rewards=[78:90 vs 97:54]. path2: lobby-72-26. path2-rewards=[26:70 vs 89:29].",
-    "output": "78"
+    "input": "P: lobby-41-74-31-38-24. P-rewards=[92:12 vs 24:61]. S: lobby-24-5-79. S-rewards=[37:87 vs 79:9].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-94-59. path1-rewards=[59:81 vs 74:47]. path2: lobby-49-11. path2-rewards=[11:80 vs 39:74].",
-    "output": "59"
+    "input": "P: lobby-11-90. P-rewards=[90:76 vs 29:75]. S: lobby-91-68-36-67-31. S-rewards=[95:36 vs 31:54].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-99-38-11. path1-rewards=[11:47 vs 64:48]. path2: lobby-13-49-36. path2-rewards=[36:21 vs 88:46].",
-    "output": "11"
+    "input": "P: lobby-11-42-79-15. P-rewards=[3:29 vs 15:15]. S: lobby-76-81-43-25-32. S-rewards=[32:91 vs 40:48].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-78-82. path1-rewards=[21:82 vs 82:49]. path2: lobby-69-94-32. path2-rewards=[62:89 vs 32:35].",
-    "output": "82"
+    "input": "P: lobby-13-19. P-rewards=[72:4 vs 19:88]. S: lobby-6-74-82. S-rewards=[84:16 vs 82:10].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-30-5. path1-rewards=[5:41 vs 79:84]. path2: lobby-52-35-9-28. path2-rewards=[99:64 vs 28:28].",
-    "output": "5"
+    "input": "P: lobby-51-12. P-rewards=[29:62 vs 12:92]. S: lobby-15-5-78-3. S-rewards=[3:16 vs 28:27].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-19-34-18-32-96. path1-rewards=[51:64 vs 96:18]. path2: lobby-96-75-55-52. path2-rewards=[31:12 vs 52:66].",
-    "output": "52"
+    "input": "P: lobby-70-55. P-rewards=[55:83 vs 30:45]. S: lobby-34-9. S-rewards=[11:56 vs 9:39].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-81-21-88. path1-rewards=[88:71 vs 73:88]. path2: lobby-77-9-50-49-60. path2-rewards=[35:93 vs 60:2].",
-    "output": "88"
+    "input": "P: lobby-77-13. P-rewards=[13:90 vs 79:27]. S: lobby-26-34-46-94-61. S-rewards=[23:99 vs 61:87].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-99-83-44-15. path1-rewards=[37:65 vs 15:98]. path2: lobby-56-21-59-1. path2-rewards=[1:23 vs 72:14].",
-    "output": "15"
+    "input": "P: lobby-44-68-33. P-rewards=[91:88 vs 33:2]. S: lobby-77-57. S-rewards=[23:53 vs 57:61].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-20-48-98. path1-rewards=[1:3 vs 98:42]. path2: lobby-70-100-68. path2-rewards=[82:15 vs 68:63].",
-    "output": "68"
+    "input": "P: lobby-84-46-50-85. P-rewards=[85:43 vs 63:6]. S: lobby-20-72-89-2. S-rewards=[2:95 vs 12:70].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-31-8-73-11. path1-rewards=[11:99 vs 10:17]. path2: lobby-94-63. path2-rewards=[75:85 vs 63:17].",
-    "output": "11"
+    "input": "P: lobby-46-79-37-87-76. P-rewards=[58:77 vs 76:11]. S: lobby-92-40-50. S-rewards=[50:1 vs 93:25].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-68-78-55-28. path1-rewards=[28:48 vs 93:67]. path2: lobby-92-40-52. path2-rewards=[52:57 vs 90:58].",
-    "output": "52"
+    "input": "P: lobby-82-58-49. P-rewards=[49:6 vs 93:58]. S: lobby-5-52-90-73-54. S-rewards=[54:22 vs 100:9].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-3-76-71-30. path1-rewards=[30:30 vs 87:5]. path2: lobby-1-10-91. path2-rewards=[91:9 vs 11:43].",
-    "output": "30"
+    "input": "P: lobby-72-78-97-1-5. P-rewards=[28:93 vs 5:82]. S: lobby-42-40-60-7-54. S-rewards=[54:11 vs 81:17].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-28-70-17-93-74. path1-rewards=[74:56 vs 14:55]. path2: lobby-32-61-53-25-13. path2-rewards=[96:53 vs 13:46].",
-    "output": "74"
+    "input": "P: lobby-41-1-28-2-92. P-rewards=[92:25 vs 84:78]. S: lobby-87-68. S-rewards=[68:16 vs 15:84].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-8-52. path1-rewards=[52:55 vs 63:36]. path2: lobby-14-32-25-69. path2-rewards=[20:60 vs 69:24].",
-    "output": "52"
+    "input": "P: lobby-13-61-51. P-rewards=[63:84 vs 51:33]. S: lobby-3-36. S-rewards=[17:67 vs 36:18].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-71-13-7-84-70. path1-rewards=[34:62 vs 70:53]. path2: lobby-12-97. path2-rewards=[25:28 vs 97:63].",
-    "output": "97"
+    "input": "P: lobby-20-36. P-rewards=[92:47 vs 36:72]. S: lobby-6-27. S-rewards=[27:41 vs 38:73].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-49-1-50. path1-rewards=[50:92 vs 78:20]. path2: lobby-59-37-55-90. path2-rewards=[93:25 vs 90:63].",
-    "output": "50"
+    "input": "P: lobby-92-83-59-82-56. P-rewards=[56:2 vs 84:20]. S: lobby-69-23-27-49. S-rewards=[40:35 vs 49:18].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-96-41. path1-rewards=[41:68 vs 64:8]. path2: lobby-7-75. path2-rewards=[75:21 vs 68:66].",
-    "output": "41"
+    "input": "P: lobby-44-100. P-rewards=[22:47 vs 100:75]. S: lobby-6-35. S-rewards=[35:38 vs 21:51].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-87-31. path1-rewards=[6:85 vs 31:11]. path2: lobby-16-73-32-75-77. path2-rewards=[77:54 vs 88:75].",
-    "output": "77"
+    "input": "P: lobby-62-94. P-rewards=[94:10 vs 71:52]. S: lobby-7-40-23. S-rewards=[23:39 vs 100:43].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-27-86-92-41. path1-rewards=[93:41 vs 41:39]. path2: lobby-34-51-17. path2-rewards=[17:59 vs 89:97].",
-    "output": "17"
+    "input": "P: lobby-61-44-16-62-15. P-rewards=[98:73 vs 15:22]. S: lobby-55-5-39-43-95. S-rewards=[23:49 vs 95:81].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-10-69. path1-rewards=[69:32 vs 48:37]. path2: lobby-65-34-17. path2-rewards=[9:21 vs 17:48].",
-    "output": "17"
+    "input": "P: lobby-9-11. P-rewards=[11:13 vs 54:72]. S: lobby-96-29-8. S-rewards=[2:67 vs 8:51].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-79-84-68-2. path1-rewards=[2:96 vs 17:20]. path2: lobby-85-14-18-34. path2-rewards=[34:71 vs 16:35].",
-    "output": "2"
+    "input": "P: lobby-55-11-48. P-rewards=[23:15 vs 48:25]. S: lobby-34-75-100. S-rewards=[61:9 vs 100:46].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-27-88-82-34. path1-rewards=[41:99 vs 34:1]. path2: lobby-33-7-12-82-55. path2-rewards=[55:43 vs 6:17].",
-    "output": "55"
+    "input": "P: lobby-68-58. P-rewards=[58:83 vs 34:28]. S: lobby-16-64-51. S-rewards=[51:6 vs 28:80].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-71-91-55-72-2. path1-rewards=[2:5 vs 22:75]. path2: lobby-10-89. path2-rewards=[89:48 vs 76:71].",
-    "output": "89"
+    "input": "P: lobby-47-70-20-14-77. P-rewards=[60:42 vs 77:64]. S: lobby-19-73-52-82-88. S-rewards=[75:64 vs 88:87].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-47-6-46-27. path1-rewards=[77:20 vs 27:80]. path2: lobby-86-14-46. path2-rewards=[58:31 vs 46:96].",
-    "output": "46"
+    "input": "P: lobby-70-79-29. P-rewards=[42:19 vs 29:5]. S: lobby-44-91. S-rewards=[91:68 vs 45:33].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-53-4-23. path1-rewards=[38:49 vs 23:90]. path2: lobby-53-86-95-32. path2-rewards=[32:14 vs 22:5].",
-    "output": "23"
+    "input": "P: lobby-75-38-92-91-61. P-rewards=[61:29 vs 6:6]. S: lobby-11-67. S-rewards=[10:39 vs 67:17].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-45-40-30-29-4. path1-rewards=[10:66 vs 4:45]. path2: lobby-52-43-36. path2-rewards=[42:52 vs 36:83].",
-    "output": "36"
+    "input": "P: lobby-21-20-84-59. P-rewards=[81:98 vs 59:87]. S: lobby-65-49-68-5. S-rewards=[13:77 vs 5:67].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-4-15-34-23. path1-rewards=[23:56 vs 51:66]. path2: lobby-5-14-77-56. path2-rewards=[47:15 vs 56:78].",
-    "output": "56"
+    "input": "P: lobby-38-69-77. P-rewards=[3:24 vs 77:1]. S: lobby-62-50-78-76-30. S-rewards=[30:95 vs 94:39].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-6-91-56-1. path1-rewards=[92:85 vs 1:80]. path2: lobby-47-56-9. path2-rewards=[9:41 vs 46:16].",
-    "output": "1"
+    "input": "P: lobby-64-34. P-rewards=[22:37 vs 34:17]. S: lobby-99-53-50-8. S-rewards=[8:31 vs 89:94].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-86-53-42-52. path1-rewards=[94:23 vs 52:87]. path2: lobby-71-17-25-54. path2-rewards=[54:96 vs 55:79].",
-    "output": "54"
+    "input": "P: lobby-62-54. P-rewards=[54:90 vs 11:46]. S: lobby-63-78-92. S-rewards=[92:20 vs 93:53].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-39-37. path1-rewards=[37:60 vs 89:57]. path2: lobby-56-75-78. path2-rewards=[78:57 vs 44:87].",
-    "output": "37"
+    "input": "P: lobby-7-13-61-100-20. P-rewards=[86:14 vs 20:81]. S: lobby-5-77. S-rewards=[77:42 vs 21:90].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-85-11-37. path1-rewards=[37:26 vs 44:4]. path2: lobby-12-97-31-87. path2-rewards=[87:19 vs 32:6].",
-    "output": "37"
+    "input": "P: lobby-100-63-15-8-79. P-rewards=[96:50 vs 79:38]. S: lobby-79-81-44-84-16. S-rewards=[88:38 vs 16:17].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-59-54. path1-rewards=[54:32 vs 67:84]. path2: lobby-92-90-50. path2-rewards=[53:89 vs 50:19].",
-    "output": "54"
+    "input": "P: lobby-67-25. P-rewards=[49:81 vs 25:59]. S: lobby-51-57. S-rewards=[26:10 vs 57:46].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-100-55. path1-rewards=[55:72 vs 62:16]. path2: lobby-23-90-67. path2-rewards=[67:32 vs 7:59].",
-    "output": "55"
+    "input": "P: lobby-63-33. P-rewards=[76:12 vs 33:28]. S: lobby-67-86. S-rewards=[78:81 vs 86:30].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-97-57-79-93. path1-rewards=[62:82 vs 93:97]. path2: lobby-71-58-21-96-61. path2-rewards=[35:36 vs 61:32].",
-    "output": "93"
+    "input": "P: lobby-65-40-15-19-55. P-rewards=[63:58 vs 55:94]. S: lobby-11-14-54-9-13. S-rewards=[13:4 vs 26:56].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-36-57-10. path1-rewards=[77:30 vs 10:18]. path2: lobby-31-35-43-41. path2-rewards=[12:50 vs 41:20].",
-    "output": "41"
+    "input": "P: lobby-93-33-11-46. P-rewards=[94:2 vs 46:45]. S: lobby-16-46. S-rewards=[46:23 vs 4:30].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-54-53. path1-rewards=[53:50 vs 28:75]. path2: lobby-70-60-54-8. path2-rewards=[58:90 vs 8:99].",
-    "output": "8"
+    "input": "P: lobby-27-1-85. P-rewards=[40:78 vs 85:89]. S: lobby-96-1. S-rewards=[1:4 vs 51:30].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-62-1-46-39-97. path1-rewards=[97:63 vs 85:35]. path2: lobby-54-69-96-95-70. path2-rewards=[70:29 vs 30:56].",
-    "output": "97"
+    "input": "P: lobby-62-45. P-rewards=[45:38 vs 48:82]. S: lobby-17-4-27-47. S-rewards=[68:42 vs 47:71].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-93-22-60-17-80. path1-rewards=[80:4 vs 78:83]. path2: lobby-51-76. path2-rewards=[76:11 vs 92:55].",
-    "output": "76"
+    "input": "P: lobby-69-75. P-rewards=[75:66 vs 32:31]. S: lobby-21-49-19-17. S-rewards=[17:32 vs 45:97].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-34-49. path1-rewards=[49:97 vs 54:33]. path2: lobby-28-59-42-44. path2-rewards=[38:11 vs 44:54].",
-    "output": "49"
+    "input": "P: lobby-17-77. P-rewards=[77:17 vs 94:39]. S: lobby-51-10. S-rewards=[11:71 vs 10:54].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-45-29. path1-rewards=[29:32 vs 6:3]. path2: lobby-100-84. path2-rewards=[84:26 vs 4:80].",
-    "output": "29"
+    "input": "P: lobby-39-82-46-11-32. P-rewards=[32:2 vs 55:94]. S: lobby-81-48-82-68-8. S-rewards=[8:54 vs 60:42].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-73-28. path1-rewards=[83:15 vs 28:96]. path2: lobby-90-33-99-48-22. path2-rewards=[22:92 vs 84:21].",
-    "output": "28"
+    "input": "P: lobby-12-24-14-36-15. P-rewards=[15:56 vs 28:32]. S: lobby-90-58-52. S-rewards=[62:59 vs 52:23].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-40-74. path1-rewards=[74:32 vs 96:90]. path2: lobby-51-92-26-10-76. path2-rewards=[87:99 vs 76:14].",
-    "output": "74"
+    "input": "P: lobby-60-81-82-12. P-rewards=[12:60 vs 63:28]. S: lobby-97-27-38-1-90. S-rewards=[88:39 vs 90:1].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-73-6. path1-rewards=[10:2 vs 6:83]. path2: lobby-69-55-85-48. path2-rewards=[48:44 vs 70:54].",
-    "output": "6"
+    "input": "P: lobby-70-78-20-55. P-rewards=[55:36 vs 76:3]. S: lobby-12-87-64-98-30. S-rewards=[56:16 vs 30:81].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-82-59-91-20. path1-rewards=[86:56 vs 20:62]. path2: lobby-23-94-67-84-35. path2-rewards=[35:60 vs 74:94].",
-    "output": "20"
+    "input": "P: lobby-33-51. P-rewards=[51:26 vs 39:11]. S: lobby-57-14-96-33-46. S-rewards=[46:77 vs 93:5].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-12-36-58. path1-rewards=[84:4 vs 58:49]. path2: lobby-97-60-73. path2-rewards=[73:44 vs 92:64].",
-    "output": "58"
+    "input": "P: lobby-16-68-32-98. P-rewards=[98:18 vs 41:67]. S: lobby-9-54-38. S-rewards=[38:74 vs 74:81].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-46-34-44. path1-rewards=[44:25 vs 2:31]. path2: lobby-77-90-36-72. path2-rewards=[73:93 vs 72:11].",
-    "output": "44"
+    "input": "P: lobby-95-100-36-38-57. P-rewards=[57:16 vs 16:52]. S: lobby-73-81-18-21. S-rewards=[99:76 vs 21:49].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-89-61-83. path1-rewards=[83:32 vs 56:85]. path2: lobby-58-3-12-38-29. path2-rewards=[98:75 vs 29:40].",
-    "output": "29"
+    "input": "P: lobby-46-81-61-96. P-rewards=[96:84 vs 42:57]. S: lobby-28-62-63-89-65. S-rewards=[65:8 vs 71:39].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-55-96-71-43. path1-rewards=[43:16 vs 33:25]. path2: lobby-90-59-35-40. path2-rewards=[30:41 vs 40:93].",
-    "output": "40"
+    "input": "P: lobby-4-46-61. P-rewards=[61:51 vs 96:47]. S: lobby-2-68-9-88-11. S-rewards=[11:1 vs 94:6].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-25-28-95. path1-rewards=[95:13 vs 82:38]. path2: lobby-36-93-76-98-68. path2-rewards=[68:25 vs 40:30].",
-    "output": "68"
+    "input": "P: lobby-82-90-38-94. P-rewards=[94:14 vs 39:59]. S: lobby-19-97-74. S-rewards=[74:56 vs 26:92].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-36-6-7. path1-rewards=[7:2 vs 67:37]. path2: lobby-90-17-82-97. path2-rewards=[97:74 vs 16:61].",
-    "output": "97"
+    "input": "P: lobby-83-88-56-19-58. P-rewards=[29:50 vs 58:57]. S: lobby-68-41-17. S-rewards=[17:45 vs 26:55].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-33-62. path1-rewards=[62:74 vs 67:88]. path2: lobby-9-52. path2-rewards=[11:7 vs 52:81].",
-    "output": "52"
+    "input": "P: lobby-26-57-27. P-rewards=[33:47 vs 27:11]. S: lobby-50-5. S-rewards=[88:8 vs 5:24].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-11-32-16-72. path1-rewards=[71:39 vs 72:58]. path2: lobby-78-77-80-29-100. path2-rewards=[100:57 vs 53:76].",
-    "output": "72"
+    "input": "P: lobby-79-39-12. P-rewards=[7:86 vs 12:90]. S: lobby-99-46-53-59. S-rewards=[88:84 vs 59:67].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-79-95. path1-rewards=[95:34 vs 83:11]. path2: lobby-98-27. path2-rewards=[29:21 vs 27:85].",
-    "output": "27"
+    "input": "P: lobby-75-59-63-33-91. P-rewards=[91:1 vs 23:84]. S: lobby-28-44-35-6-7. S-rewards=[52:1 vs 7:38].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-1-53-58. path1-rewards=[42:88 vs 58:59]. path2: lobby-38-5-30-37-91. path2-rewards=[99:30 vs 91:10].",
-    "output": "58"
+    "input": "P: lobby-78-51-72. P-rewards=[84:41 vs 72:78]. S: lobby-59-25-44. S-rewards=[14:42 vs 44:11].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-55-15-70. path1-rewards=[21:40 vs 70:8]. path2: lobby-83-20-35. path2-rewards=[10:77 vs 35:22].",
-    "output": "35"
+    "input": "P: lobby-4-67-6-25. P-rewards=[25:33 vs 30:94]. S: lobby-11-27-68-45. S-rewards=[32:95 vs 45:87].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-57-16-60-89. path1-rewards=[76:77 vs 89:57]. path2: lobby-90-52-35-65. path2-rewards=[70:6 vs 65:11].",
-    "output": "89"
+    "input": "P: lobby-33-62-45-92-31. P-rewards=[31:59 vs 10:93]. S: lobby-40-71. S-rewards=[2:57 vs 71:64].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-4-12-30-87. path1-rewards=[87:6 vs 38:97]. path2: lobby-98-87. path2-rewards=[78:23 vs 87:98].",
-    "output": "87"
+    "input": "P: lobby-59-57-16-11-31. P-rewards=[58:10 vs 31:57]. S: lobby-98-20. S-rewards=[32:55 vs 20:79].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-24-75-56-82. path1-rewards=[46:43 vs 82:14]. path2: lobby-12-61-45-53-43. path2-rewards=[43:21 vs 96:53].",
-    "output": "43"
+    "input": "P: lobby-6-24-32-63-29. P-rewards=[64:79 vs 29:72]. S: lobby-36-46-41. S-rewards=[15:70 vs 41:37].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-98-71-5-59-12. path1-rewards=[12:1 vs 57:70]. path2: lobby-33-42-15-99. path2-rewards=[99:85 vs 74:60].",
-    "output": "99"
+    "input": "P: lobby-66-78-60-69-82. P-rewards=[82:23 vs 88:54]. S: lobby-35-30-3-16. S-rewards=[14:32 vs 16:94].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-80-97-64-81. path1-rewards=[81:57 vs 18:63]. path2: lobby-98-7-27-35-71. path2-rewards=[41:16 vs 71:90].",
-    "output": "71"
+    "input": "P: lobby-95-69. P-rewards=[18:87 vs 69:46]. S: lobby-7-16-50-83-35. S-rewards=[79:92 vs 35:30].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-91-21-40. path1-rewards=[12:16 vs 40:15]. path2: lobby-71-53. path2-rewards=[53:60 vs 31:83].",
-    "output": "53"
+    "input": "P: lobby-95-31-9. P-rewards=[86:22 vs 9:37]. S: lobby-87-42-30-48. S-rewards=[67:18 vs 48:75].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-66-91-35-54. path1-rewards=[53:96 vs 54:77]. path2: lobby-61-32-59-71-19. path2-rewards=[19:66 vs 26:18].",
-    "output": "54"
+    "input": "P: lobby-47-75-82-4. P-rewards=[71:27 vs 4:18]. S: lobby-51-20-23. S-rewards=[11:64 vs 23:98].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-44-65-35-1-37. path1-rewards=[21:45 vs 37:69]. path2: lobby-76-75-85-63. path2-rewards=[64:43 vs 63:62].",
-    "output": "37"
+    "input": "P: lobby-31-94-17. P-rewards=[82:64 vs 17:17]. S: lobby-98-50-46. S-rewards=[46:81 vs 80:14].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-96-12-56. path1-rewards=[94:89 vs 56:57]. path2: lobby-98-82. path2-rewards=[82:22 vs 14:39].",
-    "output": "56"
+    "input": "P: lobby-63-59-40-2. P-rewards=[92:70 vs 2:95]. S: lobby-72-84-21. S-rewards=[21:62 vs 69:41].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-38-46. path1-rewards=[46:88 vs 58:22]. path2: lobby-56-19-32-68. path2-rewards=[80:23 vs 68:24].",
-    "output": "46"
+    "input": "P: lobby-78-52-91. P-rewards=[8:93 vs 91:5]. S: lobby-41-38-50. S-rewards=[50:41 vs 28:96].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-64-75-19. path1-rewards=[62:60 vs 19:86]. path2: lobby-60-82-33. path2-rewards=[33:2 vs 35:37].",
-    "output": "19"
+    "input": "P: lobby-86-93-85-29-34. P-rewards=[34:70 vs 51:94]. S: lobby-86-21-40-3. S-rewards=[3:8 vs 80:81].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-45-76-39-82-55. path1-rewards=[68:74 vs 55:31]. path2: lobby-59-39-26-50. path2-rewards=[14:46 vs 50:49].",
-    "output": "50"
+    "input": "P: lobby-4-31. P-rewards=[31:9 vs 88:45]. S: lobby-2-29. S-rewards=[46:85 vs 29:8].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-3-85-51-36. path1-rewards=[8:37 vs 36:96]. path2: lobby-73-88. path2-rewards=[88:64 vs 83:30].",
-    "output": "36"
+    "input": "P: lobby-58-56-19. P-rewards=[59:34 vs 19:2]. S: lobby-40-23-84-43. S-rewards=[53:69 vs 43:53].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-80-33-87. path1-rewards=[6:75 vs 87:57]. path2: lobby-81-13-83. path2-rewards=[83:5 vs 43:47].",
-    "output": "87"
+    "input": "P: lobby-98-6-73-16-53. P-rewards=[53:94 vs 94:19]. S: lobby-22-1-65-18-80. S-rewards=[74:11 vs 80:90].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-42-96-54-23. path1-rewards=[74:33 vs 23:35]. path2: lobby-17-70-47. path2-rewards=[47:22 vs 71:62].",
-    "output": "23"
+    "input": "P: lobby-32-3-22. P-rewards=[22:80 vs 82:59]. S: lobby-92-11-55. S-rewards=[16:91 vs 55:81].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-15-60-10-19. path1-rewards=[77:2 vs 19:12]. path2: lobby-87-93-51. path2-rewards=[51:51 vs 50:34].",
-    "output": "51"
+    "input": "P: lobby-44-95-94-49. P-rewards=[49:46 vs 67:86]. S: lobby-81-5. S-rewards=[13:20 vs 5:38].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-75-49-82-48. path1-rewards=[48:80 vs 64:42]. path2: lobby-87-30. path2-rewards=[30:72 vs 4:79].",
-    "output": "48"
+    "input": "P: lobby-95-97-52. P-rewards=[42:61 vs 52:37]. S: lobby-35-64-51-2. S-rewards=[74:5 vs 2:71].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-90-39-84-53-15. path1-rewards=[15:13 vs 69:69]. path2: lobby-6-5-39. path2-rewards=[39:31 vs 18:18].",
-    "output": "39"
+    "input": "P: lobby-88-5-59-51. P-rewards=[51:3 vs 69:95]. S: lobby-52-45. S-rewards=[8:5 vs 45:35].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-76-96-94-20-54. path1-rewards=[54:5 vs 55:48]. path2: lobby-63-79. path2-rewards=[37:28 vs 79:89].",
-    "output": "79"
+    "input": "P: lobby-88-98-27-68. P-rewards=[78:87 vs 68:32]. S: lobby-50-33-27-15. S-rewards=[46:93 vs 15:76].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-13-88-48-70. path1-rewards=[18:28 vs 70:12]. path2: lobby-8-51-36-25. path2-rewards=[66:83 vs 25:85].",
-    "output": "25"
+    "input": "P: lobby-20-43-96. P-rewards=[96:45 vs 77:38]. S: lobby-75-7. S-rewards=[7:47 vs 22:81].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-43-32. path1-rewards=[76:30 vs 32:76]. path2: lobby-73-27-9. path2-rewards=[29:43 vs 9:28].",
-    "output": "32"
+    "input": "P: lobby-77-56-22-1-19. P-rewards=[48:86 vs 19:93]. S: lobby-57-17. S-rewards=[3:85 vs 17:62].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-36-19. path1-rewards=[15:2 vs 19:4]. path2: lobby-70-33-23. path2-rewards=[23:17 vs 91:46].",
-    "output": "23"
+    "input": "P: lobby-9-71-55. P-rewards=[91:15 vs 55:21]. S: lobby-23-68-22-9. S-rewards=[88:65 vs 9:75].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-3-23-34-7. path1-rewards=[17:47 vs 7:61]. path2: lobby-95-54-68. path2-rewards=[68:58 vs 11:66].",
-    "output": "7"
+    "input": "P: lobby-97-56-35-40-37. P-rewards=[37:34 vs 98:68]. S: lobby-55-100. S-rewards=[100:69 vs 38:71].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-79-6-94. path1-rewards=[66:14 vs 94:55]. path2: lobby-59-83-4-8. path2-rewards=[8:88 vs 55:63].",
-    "output": "8"
+    "input": "P: lobby-19-1-97-66-20. P-rewards=[91:3 vs 20:98]. S: lobby-47-60-5-72-53. S-rewards=[88:47 vs 53:30].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-42-78. path1-rewards=[78:75 vs 85:92]. path2: lobby-9-17-36. path2-rewards=[88:42 vs 36:71].",
-    "output": "78"
+    "input": "P: lobby-81-46-90. P-rewards=[33:54 vs 90:24]. S: lobby-3-94-95-32-74. S-rewards=[74:98 vs 39:10].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-59-65-78-56. path1-rewards=[56:99 vs 89:93]. path2: lobby-90-15. path2-rewards=[91:28 vs 15:71].",
-    "output": "56"
+    "input": "P: lobby-66-91-13-25-22. P-rewards=[22:97 vs 38:79]. S: lobby-9-55-82-51-35. S-rewards=[35:46 vs 64:42].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-44-59-52-54-94. path1-rewards=[42:20 vs 94:33]. path2: lobby-41-55. path2-rewards=[55:48 vs 93:88].",
-    "output": "55"
+    "input": "P: lobby-98-33. P-rewards=[59:50 vs 33:81]. S: lobby-98-51-50. S-rewards=[50:87 vs 86:90].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-12-56. path1-rewards=[49:76 vs 56:72]. path2: lobby-96-95. path2-rewards=[18:72 vs 95:8].",
-    "output": "56"
+    "input": "P: lobby-46-73-17-91-36. P-rewards=[36:11 vs 20:45]. S: lobby-4-51-61-67. S-rewards=[67:73 vs 7:47].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-46-86-97-55-93. path1-rewards=[93:14 vs 41:65]. path2: lobby-37-77. path2-rewards=[77:74 vs 49:28].",
-    "output": "77"
+    "input": "P: lobby-86-70. P-rewards=[70:53 vs 89:19]. S: lobby-6-41-4-51-17. S-rewards=[39:77 vs 17:86].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-45-72. path1-rewards=[30:80 vs 72:72]. path2: lobby-15-98-36-74. path2-rewards=[59:79 vs 74:99].",
-    "output": "74"
+    "input": "P: lobby-21-17. P-rewards=[97:67 vs 17:6]. S: lobby-62-91-83. S-rewards=[99:6 vs 83:94].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-4-24-35-90. path1-rewards=[21:9 vs 90:85]. path2: lobby-44-45-1-24. path2-rewards=[80:19 vs 24:52].",
-    "output": "90"
+    "input": "P: lobby-24-45-75-11-72. P-rewards=[98:67 vs 72:33]. S: lobby-34-26-42. S-rewards=[42:34 vs 100:59].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-96-68. path1-rewards=[44:93 vs 68:48]. path2: lobby-49-54-59. path2-rewards=[21:42 vs 59:40].",
-    "output": "68"
+    "input": "P: lobby-71-20-5-81-75. P-rewards=[75:25 vs 43:59]. S: lobby-83-66-5. S-rewards=[5:83 vs 11:79].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-7-20. path1-rewards=[20:35 vs 90:85]. path2: lobby-97-80-7. path2-rewards=[7:57 vs 12:55].",
-    "output": "7"
+    "input": "P: lobby-91-43-84. P-rewards=[8:44 vs 84:11]. S: lobby-61-99-72. S-rewards=[72:67 vs 74:1].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-28-97-66-15. path1-rewards=[15:63 vs 93:86]. path2: lobby-56-15-37-87. path2-rewards=[87:68 vs 81:40].",
-    "output": "87"
+    "input": "P: lobby-78-46-73-58-43. P-rewards=[43:24 vs 44:17]. S: lobby-66-47-82-16-18. S-rewards=[3:3 vs 18:94].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-1-27. path1-rewards=[37:1 vs 27:42]. path2: lobby-28-99-18-98. path2-rewards=[98:16 vs 43:64].",
-    "output": "27"
+    "input": "P: lobby-53-83. P-rewards=[83:77 vs 51:92]. S: lobby-90-40. S-rewards=[7:22 vs 40:99].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-69-91-30-65-72. path1-rewards=[72:59 vs 60:41]. path2: lobby-10-51-95-6. path2-rewards=[6:10 vs 3:74].",
-    "output": "72"
+    "input": "P: lobby-53-7. P-rewards=[7:73 vs 93:53]. S: lobby-46-78-80-97-33. S-rewards=[42:24 vs 33:59].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-38-15-52-3-42. path1-rewards=[51:32 vs 42:56]. path2: lobby-80-59-89. path2-rewards=[13:56 vs 89:14].",
-    "output": "42"
+    "input": "P: lobby-50-9-46. P-rewards=[49:79 vs 46:23]. S: lobby-16-4. S-rewards=[4:52 vs 3:89].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-40-96-44-29-43. path1-rewards=[16:45 vs 43:66]. path2: lobby-10-66-82. path2-rewards=[75:45 vs 82:25].",
-    "output": "43"
+    "input": "P: lobby-71-96-89-64-61. P-rewards=[53:67 vs 61:4]. S: lobby-7-69. S-rewards=[69:83 vs 35:13].",
+    "output": "S"
   },
   {
-    "input": "path1: lobby-31-14-19. path1-rewards=[19:23 vs 91:81]. path2: lobby-26-23-78-20. path2-rewards=[10:64 vs 20:99].",
-    "output": "20"
+    "input": "P: lobby-13-61-5-20. P-rewards=[25:21 vs 20:90]. S: lobby-5-1-49-44. S-rewards=[44:19 vs 79:23].",
+    "output": "P"
   },
   {
-    "input": "path1: lobby-88-73-83-82-80. path1-rewards=[9:39 vs 80:57]. path2: lobby-81-41-20-57. path2-rewards=[57:81 vs 65:36].",
-    "output": "57"
+    "input": "P: lobby-80-43-4. P-rewards=[4:37 vs 34:22]. S: lobby-81-87-51-6-29. S-rewards=[29:43 vs 91:31].",
+    "output": "S"
   }
 ]

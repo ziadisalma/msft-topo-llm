@@ -1,0 +1,402 @@
+[
+  {
+    "input": "rewards=[B:12 vs I:99]",
+    "output": "I"
+  },
+  {
+    "input": "rewards=[B:69 vs D:49]",
+    "output": "B"
+  },
+  {
+    "input": "rewards=[K:21 vs B:18]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[K:32 vs W:21]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[N:12 vs Y:77]",
+    "output": "Y"
+  },
+  {
+    "input": "rewards=[A:94 vs K:58]",
+    "output": "A"
+  },
+  {
+    "input": "rewards=[B:86 vs C:19]",
+    "output": "B"
+  },
+  {
+    "input": "rewards=[A:56 vs J:74]",
+    "output": "J"
+  },
+  {
+    "input": "rewards=[P:99 vs B:40]",
+    "output": "P"
+  },
+  {
+    "input": "rewards=[P:78 vs Z:27]",
+    "output": "P"
+  },
+  {
+    "input": "rewards=[S:41 vs Z:2]",
+    "output": "S"
+  },
+  {
+    "input": "rewards=[U:56 vs Y:66]",
+    "output": "Y"
+  },
+  {
+    "input": "rewards=[Z:77 vs U:86]",
+    "output": "U"
+  },
+  {
+    "input": "rewards=[P:86 vs Q:54]",
+    "output": "P"
+  },
+  {
+    "input": "rewards=[Y:24 vs B:83]",
+    "output": "B"
+  },
+  {
+    "input": "rewards=[C:85 vs P:34]",
+    "output": "C"
+  },
+  {
+    "input": "rewards=[R:10 vs K:51]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[M:100 vs S:44]",
+    "output": "M"
+  },
+  {
+    "input": "rewards=[S:81 vs C:47]",
+    "output": "S"
+  },
+  {
+    "input": "rewards=[H:69 vs L:52]",
+    "output": "H"
+  },
+  {
+    "input": "rewards=[U:64 vs B:37]",
+    "output": "U"
+  },
+  {
+    "input": "rewards=[U:30 vs X:70]",
+    "output": "X"
+  },
+  {
+    "input": "rewards=[F:69 vs E:57]",
+    "output": "F"
+  },
+  {
+    "input": "rewards=[O:2 vs B:18]",
+    "output": "B"
+  },
+  {
+    "input": "rewards=[A:46 vs I:88]",
+    "output": "I"
+  },
+  {
+    "input": "rewards=[N:54 vs U:1]",
+    "output": "N"
+  },
+  {
+    "input": "rewards=[C:46 vs Q:91]",
+    "output": "Q"
+  },
+  {
+    "input": "rewards=[N:69 vs A:49]",
+    "output": "N"
+  },
+  {
+    "input": "rewards=[U:4 vs W:52]",
+    "output": "W"
+  },
+  {
+    "input": "rewards=[P:97 vs I:5]",
+    "output": "P"
+  },
+  {
+    "input": "rewards=[L:82 vs N:4]",
+    "output": "L"
+  },
+  {
+    "input": "rewards=[N:92 vs F:9]",
+    "output": "N"
+  },
+  {
+    "input": "rewards=[L:31 vs E:86]",
+    "output": "E"
+  },
+  {
+    "input": "rewards=[U:98 vs B:67]",
+    "output": "U"
+  },
+  {
+    "input": "rewards=[E:99 vs J:84]",
+    "output": "E"
+  },
+  {
+    "input": "rewards=[M:17 vs Y:48]",
+    "output": "Y"
+  },
+  {
+    "input": "rewards=[K:16 vs Q:81]",
+    "output": "Q"
+  },
+  {
+    "input": "rewards=[M:8 vs S:56]",
+    "output": "S"
+  },
+  {
+    "input": "rewards=[O:3 vs V:45]",
+    "output": "V"
+  },
+  {
+    "input": "rewards=[X:86 vs W:58]",
+    "output": "X"
+  },
+  {
+    "input": "rewards=[Y:21 vs Z:4]",
+    "output": "Y"
+  },
+  {
+    "input": "rewards=[R:44 vs Q:18]",
+    "output": "R"
+  },
+  {
+    "input": "rewards=[X:29 vs R:48]",
+    "output": "R"
+  },
+  {
+    "input": "rewards=[K:35 vs C:65]",
+    "output": "C"
+  },
+  {
+    "input": "rewards=[I:6 vs K:51]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[G:26 vs C:65]",
+    "output": "C"
+  },
+  {
+    "input": "rewards=[A:35 vs G:73]",
+    "output": "G"
+  },
+  {
+    "input": "rewards=[K:44 vs T:11]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[Z:18 vs E:69]",
+    "output": "E"
+  },
+  {
+    "input": "rewards=[P:51 vs X:100]",
+    "output": "X"
+  },
+  {
+    "input": "rewards=[W:63 vs S:44]",
+    "output": "W"
+  },
+  {
+    "input": "rewards=[Q:79 vs H:17]",
+    "output": "Q"
+  },
+  {
+    "input": "rewards=[Z:78 vs T:64]",
+    "output": "Z"
+  },
+  {
+    "input": "rewards=[S:89 vs D:7]",
+    "output": "S"
+  },
+  {
+    "input": "rewards=[O:86 vs L:54]",
+    "output": "O"
+  },
+  {
+    "input": "rewards=[Y:44 vs G:58]",
+    "output": "G"
+  },
+  {
+    "input": "rewards=[F:8 vs G:49]",
+    "output": "G"
+  },
+  {
+    "input": "rewards=[Q:23 vs M:34]",
+    "output": "M"
+  },
+  {
+    "input": "rewards=[M:9 vs L:38]",
+    "output": "L"
+  },
+  {
+    "input": "rewards=[I:78 vs Q:42]",
+    "output": "I"
+  },
+  {
+    "input": "rewards=[M:76 vs B:50]",
+    "output": "M"
+  },
+  {
+    "input": "rewards=[O:98 vs S:91]",
+    "output": "O"
+  },
+  {
+    "input": "rewards=[O:57 vs U:35]",
+    "output": "O"
+  },
+  {
+    "input": "rewards=[H:59 vs L:89]",
+    "output": "L"
+  },
+  {
+    "input": "rewards=[I:7 vs K:24]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[N:64 vs V:94]",
+    "output": "V"
+  },
+  {
+    "input": "rewards=[R:61 vs B:70]",
+    "output": "B"
+  },
+  {
+    "input": "rewards=[L:77 vs H:5]",
+    "output": "L"
+  },
+  {
+    "input": "rewards=[Y:91 vs T:37]",
+    "output": "Y"
+  },
+  {
+    "input": "rewards=[A:94 vs K:50]",
+    "output": "A"
+  },
+  {
+    "input": "rewards=[I:22 vs C:37]",
+    "output": "C"
+  },
+  {
+    "input": "rewards=[L:6 vs N:78]",
+    "output": "N"
+  },
+  {
+    "input": "rewards=[V:26 vs F:6]",
+    "output": "V"
+  },
+  {
+    "input": "rewards=[Y:68 vs F:95]",
+    "output": "F"
+  },
+  {
+    "input": "rewards=[J:60 vs P:29]",
+    "output": "J"
+  },
+  {
+    "input": "rewards=[D:79 vs C:57]",
+    "output": "D"
+  },
+  {
+    "input": "rewards=[Z:67 vs I:25]",
+    "output": "Z"
+  },
+  {
+    "input": "rewards=[U:53 vs C:51]",
+    "output": "U"
+  },
+  {
+    "input": "rewards=[O:8 vs D:73]",
+    "output": "D"
+  },
+  {
+    "input": "rewards=[U:67 vs N:46]",
+    "output": "U"
+  },
+  {
+    "input": "rewards=[G:31 vs E:28]",
+    "output": "G"
+  },
+  {
+    "input": "rewards=[G:52 vs H:10]",
+    "output": "G"
+  },
+  {
+    "input": "rewards=[N:42 vs A:84]",
+    "output": "A"
+  },
+  {
+    "input": "rewards=[H:56 vs B:94]",
+    "output": "B"
+  },
+  {
+    "input": "rewards=[J:37 vs F:15]",
+    "output": "J"
+  },
+  {
+    "input": "rewards=[G:4 vs K:66]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[Z:60 vs E:29]",
+    "output": "Z"
+  },
+  {
+    "input": "rewards=[V:51 vs Q:56]",
+    "output": "Q"
+  },
+  {
+    "input": "rewards=[M:64 vs C:6]",
+    "output": "M"
+  },
+  {
+    "input": "rewards=[P:93 vs X:14]",
+    "output": "P"
+  },
+  {
+    "input": "rewards=[O:71 vs L:79]",
+    "output": "L"
+  },
+  {
+    "input": "rewards=[Q:37 vs L:47]",
+    "output": "L"
+  },
+  {
+    "input": "rewards=[B:66 vs D:97]",
+    "output": "D"
+  },
+  {
+    "input": "rewards=[K:11 vs V:95]",
+    "output": "V"
+  },
+  {
+    "input": "rewards=[G:24 vs M:54]",
+    "output": "M"
+  },
+  {
+    "input": "rewards=[E:21 vs P:1]",
+    "output": "E"
+  },
+  {
+    "input": "rewards=[C:5 vs K:13]",
+    "output": "K"
+  },
+  {
+    "input": "rewards=[O:26 vs N:85]",
+    "output": "N"
+  },
+  {
+    "input": "rewards=[E:60 vs B:15]",
+    "output": "E"
+  },
+  {
+    "input": "rewards=[E:6 vs V:46]",
+    "output": "V"
+  }
+]

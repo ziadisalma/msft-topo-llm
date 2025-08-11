@@ -1,0 +1,402 @@
+[
+  {
+    "input": "path1: W-Y. path1-rewards=[Y:59 vs D:64]. path2: E-O-L-V. path2-rewards=[V:77 vs D:78].",
+    "output": "V"
+  },
+  {
+    "input": "path1: M-F-B-D. path1-rewards=[Y:50 vs D:17]. path2: G-Q-H-I-U. path2-rewards=[U:99 vs Y:77].",
+    "output": "U"
+  },
+  {
+    "input": "path1: C-B-S. path1-rewards=[Y:75 vs S:80]. path2: D-H-L-K-E. path2-rewards=[Y:84 vs E:14].",
+    "output": "S"
+  },
+  {
+    "input": "path1: Z-U. path1-rewards=[U:22 vs P:11]. path2: Y-K-Q-W-X. path2-rewards=[P:100 vs X:17].",
+    "output": "U"
+  },
+  {
+    "input": "path1: X-F-V-T. path1-rewards=[M:94 vs T:64]. path2: C-S-Z-D. path2-rewards=[D:100 vs M:47].",
+    "output": "D"
+  },
+  {
+    "input": "path1: L-E-U-C-V. path1-rewards=[V:14 vs N:69]. path2: G-X. path2-rewards=[X:89 vs N:55].",
+    "output": "X"
+  },
+  {
+    "input": "path1: Z-D. path1-rewards=[A:44 vs D:99]. path2: F-Y. path2-rewards=[Y:100 vs A:16].",
+    "output": "Y"
+  },
+  {
+    "input": "path1: M-C-W-B-G. path1-rewards=[G:77 vs N:53]. path2: Q-J-X-Z. path2-rewards=[Z:76 vs N:42].",
+    "output": "G"
+  },
+  {
+    "input": "path1: W-X-B. path1-rewards=[J:100 vs B:45]. path2: Y-I-K. path2-rewards=[J:28 vs K:25].",
+    "output": "B"
+  },
+  {
+    "input": "path1: B-O-Q-D-A. path1-rewards=[A:65 vs Y:75]. path2: C-W-V. path2-rewards=[V:15 vs Y:45].",
+    "output": "A"
+  },
+  {
+    "input": "path1: H-A-D-W-S. path1-rewards=[S:55 vs R:2]. path2: Y-Q-J. path2-rewards=[J:14 vs R:24].",
+    "output": "S"
+  },
+  {
+    "input": "path1: R-S-E-W. path1-rewards=[D:90 vs W:35]. path2: I-H-B. path2-rewards=[D:35 vs B:62].",
+    "output": "B"
+  },
+  {
+    "input": "path1: E-K-H-A-X. path1-rewards=[X:39 vs W:62]. path2: J-T-G-N. path2-rewards=[W:57 vs N:93].",
+    "output": "N"
+  },
+  {
+    "input": "path1: X-N-Q-S-C. path1-rewards=[G:30 vs C:99]. path2: H-Y-F-A-E. path2-rewards=[G:25 vs E:84].",
+    "output": "C"
+  },
+  {
+    "input": "path1: F-P. path1-rewards=[P:59 vs N:89]. path2: Q-O-K-C. path2-rewards=[C:57 vs N:35].",
+    "output": "P"
+  },
+  {
+    "input": "path1: K-L-D-Z. path1-rewards=[Z:31 vs H:24]. path2: P-R-N-M. path2-rewards=[M:60 vs H:48].",
+    "output": "M"
+  },
+  {
+    "input": "path1: F-J-E-Z. path1-rewards=[H:83 vs Z:23]. path2: G-I. path2-rewards=[H:76 vs I:89].",
+    "output": "I"
+  },
+  {
+    "input": "path1: P-M-Q. path1-rewards=[R:56 vs Q:18]. path2: F-I-D-T. path2-rewards=[R:40 vs T:14].",
+    "output": "Q"
+  },
+  {
+    "input": "path1: S-W. path1-rewards=[O:81 vs W:74]. path2: Q-M-B. path2-rewards=[O:59 vs B:57].",
+    "output": "W"
+  },
+  {
+    "input": "path1: V-W. path1-rewards=[W:14 vs K:93]. path2: P-C. path2-rewards=[C:86 vs K:27].",
+    "output": "C"
+  },
+  {
+    "input": "path1: E-F-L-A-C. path1-rewards=[C:3 vs M:46]. path2: N-P-D-G-Y. path2-rewards=[Y:81 vs M:27].",
+    "output": "Y"
+  },
+  {
+    "input": "path1: A-U-W-C-H. path1-rewards=[H:32 vs L:100]. path2: F-J. path2-rewards=[J:6 vs L:51].",
+    "output": "H"
+  },
+  {
+    "input": "path1: C-T-Q-V. path1-rewards=[K:78 vs V:36]. path2: Z-I. path2-rewards=[K:24 vs I:51].",
+    "output": "I"
+  },
+  {
+    "input": "path1: Z-S-N-U. path1-rewards=[G:82 vs U:57]. path2: O-Y-K-P-L. path2-rewards=[G:63 vs L:56].",
+    "output": "U"
+  },
+  {
+    "input": "path1: B-S-F. path1-rewards=[F:89 vs N:65]. path2: E-D-Q-A-X. path2-rewards=[X:84 vs N:68].",
+    "output": "F"
+  },
+  {
+    "input": "path1: K-L. path1-rewards=[G:77 vs L:2]. path2: D-O-C. path2-rewards=[G:10 vs C:67].",
+    "output": "C"
+  },
+  {
+    "input": "path1: G-X. path1-rewards=[X:72 vs T:66]. path2: W-D. path2-rewards=[T:3 vs D:56].",
+    "output": "X"
+  },
+  {
+    "input": "path1: J-V-N-R. path1-rewards=[R:8 vs B:55]. path2: A-Q-C-X. path2-rewards=[B:35 vs X:3].",
+    "output": "R"
+  },
+  {
+    "input": "path1: L-O-J-B. path1-rewards=[B:39 vs R:97]. path2: E-Y. path2-rewards=[Y:35 vs R:41].",
+    "output": "B"
+  },
+  {
+    "input": "path1: N-K-L. path1-rewards=[J:46 vs L:15]. path2: V-R. path2-rewards=[J:65 vs R:64].",
+    "output": "R"
+  },
+  {
+    "input": "path1: N-P-F-H-V. path1-rewards=[D:37 vs V:41]. path2: Y-K-Z-T-R. path2-rewards=[D:14 vs R:42].",
+    "output": "R"
+  },
+  {
+    "input": "path1: X-I-Y-V-Z. path1-rewards=[H:96 vs Z:38]. path2: N-W-B-A-S. path2-rewards=[H:45 vs S:25].",
+    "output": "Z"
+  },
+  {
+    "input": "path1: N-S-A. path1-rewards=[O:91 vs A:79]. path2: J-X-I-U-L. path2-rewards=[O:2 vs L:93].",
+    "output": "L"
+  },
+  {
+    "input": "path1: J-W-E. path1-rewards=[E:33 vs N:84]. path2: D-Q. path2-rewards=[N:30 vs Q:19].",
+    "output": "E"
+  },
+  {
+    "input": "path1: F-S-O-Q. path1-rewards=[Q:70 vs P:90]. path2: B-G-C-N. path2-rewards=[P:77 vs N:92].",
+    "output": "N"
+  },
+  {
+    "input": "path1: L-T-O-V. path1-rewards=[V:76 vs U:97]. path2: M-C. path2-rewards=[C:9 vs U:15].",
+    "output": "V"
+  },
+  {
+    "input": "path1: I-B-M-E. path1-rewards=[E:41 vs P:75]. path2: Y-S-X-W. path2-rewards=[W:90 vs P:3].",
+    "output": "W"
+  },
+  {
+    "input": "path1: C-X-R. path1-rewards=[R:43 vs O:68]. path2: P-Z-W-A. path2-rewards=[A:38 vs O:21].",
+    "output": "R"
+  },
+  {
+    "input": "path1: H-U-K-P-C. path1-rewards=[C:16 vs R:6]. path2: M-N-E-T. path2-rewards=[T:49 vs R:4].",
+    "output": "T"
+  },
+  {
+    "input": "path1: M-S-B-X. path1-rewards=[X:5 vs C:52]. path2: V-L. path2-rewards=[L:61 vs C:16].",
+    "output": "L"
+  },
+  {
+    "input": "path1: Z-L. path1-rewards=[A:30 vs L:58]. path2: C-R-H-D-I. path2-rewards=[A:42 vs I:13].",
+    "output": "L"
+  },
+  {
+    "input": "path1: R-V-U-L-C. path1-rewards=[Y:97 vs C:73]. path2: P-K-I-N-Z. path2-rewards=[Z:12 vs Y:83].",
+    "output": "C"
+  },
+  {
+    "input": "path1: J-G. path1-rewards=[G:98 vs W:45]. path2: P-Q-F-Z-V. path2-rewards=[V:12 vs W:96].",
+    "output": "G"
+  },
+  {
+    "input": "path1: M-K. path1-rewards=[X:59 vs K:7]. path2: F-R-P-Q. path2-rewards=[Q:16 vs X:83].",
+    "output": "Q"
+  },
+  {
+    "input": "path1: I-E-Z-K. path1-rewards=[K:93 vs R:78]. path2: J-L-P-U-W. path2-rewards=[R:50 vs W:68].",
+    "output": "K"
+  },
+  {
+    "input": "path1: U-E-L-R. path1-rewards=[R:88 vs H:71]. path2: Q-T-X-A. path2-rewards=[H:56 vs A:4].",
+    "output": "R"
+  },
+  {
+    "input": "path1: Q-B. path1-rewards=[B:20 vs V:57]. path2: N-H-P. path2-rewards=[P:80 vs V:68].",
+    "output": "P"
+  },
+  {
+    "input": "path1: C-F-J-I. path1-rewards=[I:67 vs N:59]. path2: Z-T. path2-rewards=[T:2 vs N:48].",
+    "output": "I"
+  },
+  {
+    "input": "path1: J-W. path1-rewards=[U:75 vs W:29]. path2: C-Y. path2-rewards=[Y:34 vs U:3].",
+    "output": "Y"
+  },
+  {
+    "input": "path1: A-D-G-K-T. path1-rewards=[T:34 vs X:6]. path2: Y-S-J. path2-rewards=[X:36 vs J:43].",
+    "output": "J"
+  },
+  {
+    "input": "path1: T-G-I. path1-rewards=[I:40 vs B:34]. path2: O-Z-W-P. path2-rewards=[B:55 vs P:58].",
+    "output": "P"
+  },
+  {
+    "input": "path1: N-K. path1-rewards=[F:86 vs K:96]. path2: G-O-P-D-U. path2-rewards=[F:86 vs U:99].",
+    "output": "U"
+  },
+  {
+    "input": "path1: G-F-A-H. path1-rewards=[B:97 vs H:59]. path2: D-E-Q-C-W. path2-rewards=[B:94 vs W:94].",
+    "output": "W"
+  },
+  {
+    "input": "path1: J-D-M. path1-rewards=[M:30 vs R:92]. path2: B-L-P. path2-rewards=[R:84 vs P:92].",
+    "output": "P"
+  },
+  {
+    "input": "path1: B-A-I. path1-rewards=[I:58 vs M:71]. path2: S-F-C-N-J. path2-rewards=[M:75 vs J:41].",
+    "output": "I"
+  },
+  {
+    "input": "path1: Q-M-W-P. path1-rewards=[C:18 vs P:96]. path2: J-X. path2-rewards=[X:39 vs C:29].",
+    "output": "P"
+  },
+  {
+    "input": "path1: T-A-X-O-V. path1-rewards=[S:96 vs V:34]. path2: F-R. path2-rewards=[R:65 vs S:46].",
+    "output": "R"
+  },
+  {
+    "input": "path1: B-Q-P-U-X. path1-rewards=[G:39 vs X:1]. path2: A-W-O-C. path2-rewards=[C:23 vs G:64].",
+    "output": "C"
+  },
+  {
+    "input": "path1: C-Q-Y. path1-rewards=[Y:10 vs Z:4]. path2: M-L-D. path2-rewards=[D:91 vs Z:21].",
+    "output": "D"
+  },
+  {
+    "input": "path1: A-B-D. path1-rewards=[W:12 vs D:11]. path2: H-Z-O-V. path2-rewards=[W:36 vs V:97].",
+    "output": "V"
+  },
+  {
+    "input": "path1: A-S-R. path1-rewards=[H:44 vs R:38]. path2: O-V. path2-rewards=[H:88 vs V:7].",
+    "output": "R"
+  },
+  {
+    "input": "path1: E-A-S-Z-D. path1-rewards=[C:80 vs D:59]. path2: R-I-G-F-U. path2-rewards=[C:31 vs U:12].",
+    "output": "D"
+  },
+  {
+    "input": "path1: R-P. path1-rewards=[L:39 vs P:83]. path2: F-B. path2-rewards=[B:24 vs L:67].",
+    "output": "P"
+  },
+  {
+    "input": "path1: R-I-U-F-Z. path1-rewards=[Q:36 vs Z:13]. path2: V-J-O. path2-rewards=[O:45 vs Q:60].",
+    "output": "O"
+  },
+  {
+    "input": "path1: W-M-I-J. path1-rewards=[J:59 vs G:45]. path2: D-E-S-O-B. path2-rewards=[G:5 vs B:39].",
+    "output": "J"
+  },
+  {
+    "input": "path1: L-B. path1-rewards=[X:97 vs B:37]. path2: M-T-H-P-G. path2-rewards=[X:84 vs G:73].",
+    "output": "G"
+  },
+  {
+    "input": "path1: V-J-S-A. path1-rewards=[A:43 vs T:85]. path2: H-W-F-B. path2-rewards=[T:2 vs B:64].",
+    "output": "B"
+  },
+  {
+    "input": "path1: T-A. path1-rewards=[A:21 vs U:1]. path2: C-Y. path2-rewards=[U:62 vs Y:57].",
+    "output": "Y"
+  },
+  {
+    "input": "path1: S-C. path1-rewards=[C:5 vs I:36]. path2: J-L-D-X. path2-rewards=[I:67 vs X:57].",
+    "output": "X"
+  },
+  {
+    "input": "path1: N-J-K-L. path1-rewards=[L:57 vs V:33]. path2: R-E. path2-rewards=[V:44 vs E:75].",
+    "output": "E"
+  },
+  {
+    "input": "path1: K-X-I-J. path1-rewards=[M:69 vs J:72]. path2: B-Q-H. path2-rewards=[M:19 vs H:88].",
+    "output": "H"
+  },
+  {
+    "input": "path1: D-Z-N-B-J. path1-rewards=[J:53 vs W:33]. path2: T-H-L-F. path2-rewards=[F:3 vs W:94].",
+    "output": "J"
+  },
+  {
+    "input": "path1: W-E-L-Z-H. path1-rewards=[H:53 vs Y:34]. path2: I-R-P-U-T. path2-rewards=[T:79 vs Y:62].",
+    "output": "T"
+  },
+  {
+    "input": "path1: A-J-K-D-H. path1-rewards=[U:64 vs H:13]. path2: F-W. path2-rewards=[U:33 vs W:36].",
+    "output": "W"
+  },
+  {
+    "input": "path1: L-P-K. path1-rewards=[K:40 vs U:30]. path2: R-S-B-C-Y. path2-rewards=[Y:46 vs U:37].",
+    "output": "Y"
+  },
+  {
+    "input": "path1: E-R. path1-rewards=[Z:7 vs R:94]. path2: A-P. path2-rewards=[P:50 vs Z:78].",
+    "output": "R"
+  },
+  {
+    "input": "path1: Y-I-E-J. path1-rewards=[N:50 vs J:43]. path2: M-O-K. path2-rewards=[N:82 vs K:87].",
+    "output": "K"
+  },
+  {
+    "input": "path1: V-R-G. path1-rewards=[G:96 vs M:43]. path2: X-F-Y. path2-rewards=[M:7 vs Y:53].",
+    "output": "G"
+  },
+  {
+    "input": "path1: K-Z. path1-rewards=[J:40 vs Z:62]. path2: G-C-X-H-O. path2-rewards=[J:79 vs O:80].",
+    "output": "O"
+  },
+  {
+    "input": "path1: V-T-W-F-K. path1-rewards=[A:71 vs K:59]. path2: M-R-X-S-B. path2-rewards=[B:64 vs A:90].",
+    "output": "B"
+  },
+  {
+    "input": "path1: R-Z-K-L-N. path1-rewards=[N:97 vs U:46]. path2: A-D-S-W-B. path2-rewards=[B:8 vs U:33].",
+    "output": "N"
+  },
+  {
+    "input": "path1: F-Y-H-J. path1-rewards=[Q:96 vs J:96]. path2: V-L-R. path2-rewards=[Q:22 vs R:82].",
+    "output": "J"
+  },
+  {
+    "input": "path1: B-H-D-F-X. path1-rewards=[G:44 vs X:82]. path2: U-T-K-C-W. path2-rewards=[W:4 vs G:43].",
+    "output": "X"
+  },
+  {
+    "input": "path1: P-R-I. path1-rewards=[Z:86 vs I:74]. path2: N-L-U. path2-rewards=[Z:11 vs U:60].",
+    "output": "I"
+  },
+  {
+    "input": "path1: C-Z-E-L. path1-rewards=[L:68 vs J:69]. path2: D-Y-V-K. path2-rewards=[J:37 vs K:48].",
+    "output": "L"
+  },
+  {
+    "input": "path1: U-N-B-G. path1-rewards=[Z:86 vs G:70]. path2: M-Y-O. path2-rewards=[O:10 vs Z:45].",
+    "output": "G"
+  },
+  {
+    "input": "path1: Y-B-G-M-K. path1-rewards=[K:96 vs L:75]. path2: N-C-Q-I. path2-rewards=[L:72 vs I:97].",
+    "output": "I"
+  },
+  {
+    "input": "path1: S-E-W-V-B. path1-rewards=[U:36 vs B:13]. path2: J-C-P. path2-rewards=[P:86 vs U:51].",
+    "output": "P"
+  },
+  {
+    "input": "path1: Q-P-L. path1-rewards=[L:26 vs W:13]. path2: E-U-F-B. path2-rewards=[B:74 vs W:59].",
+    "output": "B"
+  },
+  {
+    "input": "path1: U-R-W-E. path1-rewards=[E:7 vs B:49]. path2: D-X. path2-rewards=[B:22 vs X:72].",
+    "output": "X"
+  },
+  {
+    "input": "path1: F-Q-A. path1-rewards=[I:29 vs A:24]. path2: E-J. path2-rewards=[J:12 vs I:62].",
+    "output": "A"
+  },
+  {
+    "input": "path1: X-U-L-D. path1-rewards=[D:2 vs F:28]. path2: T-W-H-P-K. path2-rewards=[F:93 vs K:68].",
+    "output": "K"
+  },
+  {
+    "input": "path1: S-Q-F. path1-rewards=[A:70 vs F:92]. path2: N-L-O-J-P. path2-rewards=[P:76 vs A:89].",
+    "output": "F"
+  },
+  {
+    "input": "path1: V-T-H. path1-rewards=[L:89 vs H:31]. path2: N-Y-Q-W-O. path2-rewards=[L:99 vs O:91].",
+    "output": "O"
+  },
+  {
+    "input": "path1: N-P-R-U. path1-rewards=[Y:76 vs U:79]. path2: D-J. path2-rewards=[Y:71 vs J:56].",
+    "output": "U"
+  },
+  {
+    "input": "path1: O-J-D-I. path1-rewards=[H:9 vs I:40]. path2: Q-T-N-X. path2-rewards=[X:39 vs H:78].",
+    "output": "I"
+  },
+  {
+    "input": "path1: P-F-M. path1-rewards=[M:43 vs O:32]. path2: V-E. path2-rewards=[O:54 vs E:99].",
+    "output": "E"
+  },
+  {
+    "input": "path1: B-W. path1-rewards=[W:100 vs Q:18]. path2: J-N-K-T. path2-rewards=[T:54 vs Q:36].",
+    "output": "W"
+  },
+  {
+    "input": "path1: I-O-Z. path1-rewards=[F:77 vs Z:19]. path2: K-G-T-X-Y. path2-rewards=[Y:62 vs F:58].",
+    "output": "Y"
+  },
+  {
+    "input": "path1: V-D-S-H-M. path1-rewards=[M:29 vs W:36]. path2: O-Q-T-U-R. path2-rewards=[R:82 vs W:71].",
+    "output": "R"
+  }
+]

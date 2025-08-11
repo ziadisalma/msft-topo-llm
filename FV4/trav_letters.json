@@ -1,0 +1,402 @@
+[
+  {
+    "input": "path: I-C",
+    "output": "C"
+  },
+  {
+    "input": "path: I-D-B",
+    "output": "B"
+  },
+  {
+    "input": "path: R-K-B",
+    "output": "B"
+  },
+  {
+    "input": "path: E-K",
+    "output": "K"
+  },
+  {
+    "input": "path: K-W-H-F",
+    "output": "F"
+  },
+  {
+    "input": "path: N-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: T-M",
+    "output": "M"
+  },
+  {
+    "input": "path: A-K",
+    "output": "K"
+  },
+  {
+    "input": "path: O-D-B-C",
+    "output": "C"
+  },
+  {
+    "input": "path: E-Z-A-J",
+    "output": "J"
+  },
+  {
+    "input": "path: S-P-I",
+    "output": "I"
+  },
+  {
+    "input": "path: B-Y-J",
+    "output": "J"
+  },
+  {
+    "input": "path: Q-Z-P",
+    "output": "P"
+  },
+  {
+    "input": "path: T-U",
+    "output": "U"
+  },
+  {
+    "input": "path: S-Z-K-A",
+    "output": "A"
+  },
+  {
+    "input": "path: Y-U-Q",
+    "output": "Q"
+  },
+  {
+    "input": "path: V-R-U",
+    "output": "U"
+  },
+  {
+    "input": "path: T-P-Q-V",
+    "output": "V"
+  },
+  {
+    "input": "path: L-Q-B",
+    "output": "B"
+  },
+  {
+    "input": "path: F-X-C-P",
+    "output": "P"
+  },
+  {
+    "input": "path: I-F-K-R",
+    "output": "R"
+  },
+  {
+    "input": "path: C-X-O",
+    "output": "O"
+  },
+  {
+    "input": "path: S-Y-K",
+    "output": "K"
+  },
+  {
+    "input": "path: G-S",
+    "output": "S"
+  },
+  {
+    "input": "path: U-L",
+    "output": "L"
+  },
+  {
+    "input": "path: L-H",
+    "output": "H"
+  },
+  {
+    "input": "path: R-Q-X",
+    "output": "X"
+  },
+  {
+    "input": "path: U-J",
+    "output": "J"
+  },
+  {
+    "input": "path: Y-U-X",
+    "output": "X"
+  },
+  {
+    "input": "path: R-P",
+    "output": "P"
+  },
+  {
+    "input": "path: E-R",
+    "output": "R"
+  },
+  {
+    "input": "path: M-Y-O",
+    "output": "O"
+  },
+  {
+    "input": "path: A-E",
+    "output": "E"
+  },
+  {
+    "input": "path: G-A-I",
+    "output": "I"
+  },
+  {
+    "input": "path: V-I-N",
+    "output": "N"
+  },
+  {
+    "input": "path: N-A-D-T",
+    "output": "T"
+  },
+  {
+    "input": "path: Q-L",
+    "output": "L"
+  },
+  {
+    "input": "path: C-N-A-Z",
+    "output": "Z"
+  },
+  {
+    "input": "path: M-C-R-W",
+    "output": "W"
+  },
+  {
+    "input": "path: M-A-K-I",
+    "output": "I"
+  },
+  {
+    "input": "path: B-Y-R",
+    "output": "R"
+  },
+  {
+    "input": "path: N-L-A",
+    "output": "A"
+  },
+  {
+    "input": "path: U-F-N-C",
+    "output": "C"
+  },
+  {
+    "input": "path: V-E-L-H",
+    "output": "H"
+  },
+  {
+    "input": "path: C-U-B-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: M-R-J-E",
+    "output": "E"
+  },
+  {
+    "input": "path: Y-J-M-L",
+    "output": "L"
+  },
+  {
+    "input": "path: R-K",
+    "output": "K"
+  },
+  {
+    "input": "path: D-U-F-Z",
+    "output": "Z"
+  },
+  {
+    "input": "path: M-N-B-X",
+    "output": "X"
+  },
+  {
+    "input": "path: O-V",
+    "output": "V"
+  },
+  {
+    "input": "path: L-O",
+    "output": "O"
+  },
+  {
+    "input": "path: X-W-V-O",
+    "output": "O"
+  },
+  {
+    "input": "path: N-Z-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: F-Q",
+    "output": "Q"
+  },
+  {
+    "input": "path: Q-R-E",
+    "output": "E"
+  },
+  {
+    "input": "path: Q-D-R",
+    "output": "R"
+  },
+  {
+    "input": "path: L-H-S-K",
+    "output": "K"
+  },
+  {
+    "input": "path: I-Q",
+    "output": "Q"
+  },
+  {
+    "input": "path: G-K",
+    "output": "K"
+  },
+  {
+    "input": "path: M-B-Q",
+    "output": "Q"
+  },
+  {
+    "input": "path: G-Q",
+    "output": "Q"
+  },
+  {
+    "input": "path: Y-A",
+    "output": "A"
+  },
+  {
+    "input": "path: I-S",
+    "output": "S"
+  },
+  {
+    "input": "path: C-T",
+    "output": "T"
+  },
+  {
+    "input": "path: C-K-R",
+    "output": "R"
+  },
+  {
+    "input": "path: E-Z-R-P",
+    "output": "P"
+  },
+  {
+    "input": "path: X-M-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: I-W",
+    "output": "W"
+  },
+  {
+    "input": "path: P-K-M-H",
+    "output": "H"
+  },
+  {
+    "input": "path: E-T-U-A",
+    "output": "A"
+  },
+  {
+    "input": "path: T-P-K-W",
+    "output": "W"
+  },
+  {
+    "input": "path: D-W-B-L",
+    "output": "L"
+  },
+  {
+    "input": "path: L-V-N",
+    "output": "N"
+  },
+  {
+    "input": "path: L-G-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: K-Z-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: F-M",
+    "output": "M"
+  },
+  {
+    "input": "path: N-M",
+    "output": "M"
+  },
+  {
+    "input": "path: I-F-R-M",
+    "output": "M"
+  },
+  {
+    "input": "path: C-J-D",
+    "output": "D"
+  },
+  {
+    "input": "path: Q-T-K",
+    "output": "K"
+  },
+  {
+    "input": "path: M-B",
+    "output": "B"
+  },
+  {
+    "input": "path: M-J-D-O",
+    "output": "O"
+  },
+  {
+    "input": "path: Y-W-K-H",
+    "output": "H"
+  },
+  {
+    "input": "path: O-I-S-L",
+    "output": "L"
+  },
+  {
+    "input": "path: W-O",
+    "output": "O"
+  },
+  {
+    "input": "path: S-I-K-B",
+    "output": "B"
+  },
+  {
+    "input": "path: D-A",
+    "output": "A"
+  },
+  {
+    "input": "path: V-P-X",
+    "output": "X"
+  },
+  {
+    "input": "path: P-R",
+    "output": "R"
+  },
+  {
+    "input": "path: P-R",
+    "output": "R"
+  },
+  {
+    "input": "path: K-L",
+    "output": "L"
+  },
+  {
+    "input": "path: T-B",
+    "output": "B"
+  },
+  {
+    "input": "path: Q-T-Y",
+    "output": "Y"
+  },
+  {
+    "input": "path: W-S-A",
+    "output": "A"
+  },
+  {
+    "input": "path: X-M-H",
+    "output": "H"
+  },
+  {
+    "input": "path: C-I-J-F",
+    "output": "F"
+  },
+  {
+    "input": "path: L-N-B",
+    "output": "B"
+  },
+  {
+    "input": "path: A-P-V-F",
+    "output": "F"
+  },
+  {
+    "input": "path: B-I",
+    "output": "I"
+  }
+]

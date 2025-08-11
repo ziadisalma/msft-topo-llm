@@ -1,402 +1,402 @@
 [
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-37-90. P-rewards={13: 78, 62: 3, 80: 66, 90: 64}. S: lobby-60-48-86. S-rewards={51: 97, 79: 71, 86: 80}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-51-23-8-14-16. P-rewards={16: 77, 58: 65}. S: lobby-20-13-21-66-64. S-rewards={31: 7, 64: 49, 85: 9}.",
+    "input": "P: lobby-4-95. Prewards=[95:95 vs 15:12]. S: lobby-32-29-18-95. Srewards=[95:70 vs 92:76].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-24-8. P-rewards={8: 84, 16: 87, 80: 8, 85: 84}. S: lobby-38-36-10. S-rewards={10: 59, 88: 83}.",
+    "input": "P: lobby-30-65-78. Prewards=[78:90 vs 97:54]. S: lobby-72-26. Srewards=[26:70 vs 89:29].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-43-68-86-90. P-rewards={82: 48, 90: 35}. S: lobby-22-17-11-100-41. S-rewards={27: 71, 41: 10, 85: 15, 96: 85}.",
+    "input": "P: lobby-98-21. Prewards=[49:13 vs 21:12]. S: lobby-44-36-20-28-98. Srewards=[14:46 vs 98:49].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-94-59. Prewards=[59:81 vs 74:47]. S: lobby-49-11. Srewards=[11:80 vs 39:74].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-64-100-94-47. P-rewards={47: 17, 48: 83}. S: lobby-6-61-54-78-100. S-rewards={93: 20, 100: 94}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-14-89-69-55. P-rewards={21: 3, 55: 95}. S: lobby-76-5-19-1-14. S-rewards={14: 64, 20: 34, 77: 97}.",
+    "input": "P: lobby-99-38-11. Prewards=[11:47 vs 64:48]. S: lobby-13-49-36. Srewards=[36:21 vs 88:46].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-44-50-12-92-5. P-rewards={5: 74, 28: 34, 57: 52, 94: 77}. S: lobby-92-27. S-rewards={27: 45, 47: 24, 58: 69, 60: 7}.",
+    "input": "P: lobby-78-82. Prewards=[21:82 vs 82:49]. S: lobby-69-94-32. Srewards=[62:89 vs 32:35].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-25-91-95. P-rewards={31: 28, 47: 50, 95: 25}. S: lobby-86-30. S-rewards={8: 8, 30: 59, 32: 65}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-4-70. P-rewards={18: 51, 30: 98, 70: 58}. S: lobby-75-45. S-rewards={35: 14, 45: 1}.",
+    "input": "P: lobby-30-5. Prewards=[5:41 vs 79:84]. S: lobby-52-35-9-28. Srewards=[99:64 vs 28:28].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-16-73-80. P-rewards={54: 43, 80: 15}. S: lobby-26-49-55-14-2. S-rewards={2: 18, 38: 70, 77: 74}.",
+    "input": "P: lobby-19-34-18-32-96. Prewards=[51:64 vs 96:18]. S: lobby-96-75-55-52. Srewards=[31:12 vs 52:66].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-89-32-26. P-rewards={26: 83, 40: 62, 96: 10}. S: lobby-6-12-35. S-rewards={21: 94, 35: 29, 47: 27, 50: 2}.",
+    "input": "P: lobby-81-21-88. Prewards=[88:71 vs 73:88]. S: lobby-77-9-50-49-60. Srewards=[35:93 vs 60:2].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-82-20-37-73-86. P-rewards={69: 56, 78: 93, 86: 55, 88: 67}. S: lobby-39-93-62-57-40. S-rewards={10: 82, 29: 93, 40: 90, 91: 20}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-83-14. P-rewards={14: 26, 26: 79}. S: lobby-99-84. S-rewards={8: 60, 35: 54, 69: 63, 84: 22}.",
+    "input": "P: lobby-99-83-44-15. Prewards=[37:65 vs 15:98]. S: lobby-56-21-59-1. Srewards=[1:23 vs 72:14].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-9-44-59-57. P-rewards={48: 50, 52: 90, 57: 13}. S: lobby-64-18-15-42. S-rewards={42: 27, 45: 60, 47: 31}.",
+    "input": "P: lobby-20-48-98. Prewards=[1:3 vs 98:42]. S: lobby-70-100-68. Srewards=[82:15 vs 68:63].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-48-39-56. P-rewards={7: 20, 24: 28, 41: 18, 56: 17}. S: lobby-76-38-68. S-rewards={68: 83, 98: 76}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-34-64-50. P-rewards={15: 97, 19: 65, 50: 56, 51: 40}. S: lobby-33-14-96. S-rewards={13: 89, 23: 67, 96: 74}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-7-49-74-57-81. P-rewards={81: 92, 97: 63}. S: lobby-72-61-70-83-14. S-rewards={11: 86, 14: 14, 39: 93}.",
+    "input": "P: lobby-31-8-73-11. Prewards=[11:99 vs 10:17]. S: lobby-94-63. Srewards=[75:85 vs 63:17].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-58-90-12. P-rewards={12: 43, 38: 6}. S: lobby-62-19-24-46-1. S-rewards={1: 42, 80: 24}.",
+    "input": "P: lobby-68-78-55-28. Prewards=[28:48 vs 93:67]. S: lobby-92-40-52. Srewards=[52:57 vs 90:58].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-3-76-71-30. Prewards=[30:30 vs 87:5]. S: lobby-1-10-91. Srewards=[91:9 vs 11:43].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-81-46. P-rewards={2: 11, 8: 90, 46: 82}. S: lobby-42-16-54. S-rewards={17: 79, 54: 26}.",
+    "input": "P: lobby-28-70-17-93-74. Prewards=[74:56 vs 14:55]. S: lobby-32-61-53-25-13. Srewards=[96:53 vs 13:46].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-32-6-100. P-rewards={85: 86, 100: 65}. S: lobby-6-15-13-39-4. S-rewards={4: 36, 34: 78, 40: 24, 94: 51}.",
+    "input": "P: lobby-8-52. Prewards=[52:55 vs 63:36]. S: lobby-14-32-25-69. Srewards=[20:60 vs 69:24].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-81-92-42. P-rewards={42: 76, 49: 27, 61: 95}. S: lobby-74-53-81-91-85. S-rewards={59: 3, 85: 63, 89: 67}.",
+    "input": "P: lobby-71-13-7-84-70. Prewards=[34:62 vs 70:53]. S: lobby-12-97. Srewards=[25:28 vs 97:63].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-49-1-50. Prewards=[50:92 vs 78:20]. S: lobby-59-37-55-90. Srewards=[93:25 vs 90:63].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-57-5-75. P-rewards={12: 16, 64: 3, 75: 14}. S: lobby-99-15-10. S-rewards={10: 65, 37: 68, 91: 30, 96: 51}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-98-2-31-41-47. P-rewards={3: 77, 47: 67}. S: lobby-51-12. S-rewards={12: 15, 91: 56}.",
+    "input": "P: lobby-96-41. Prewards=[41:68 vs 64:8]. S: lobby-7-75. Srewards=[75:21 vs 68:66].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-88-9. P-rewards={9: 3, 58: 90, 68: 75, 74: 46}. S: lobby-95-85-14. S-rewards={14: 86, 39: 70, 50: 55}.",
+    "input": "P: lobby-87-31. Prewards=[6:85 vs 31:11]. S: lobby-16-73-32-75-77. Srewards=[77:54 vs 88:75].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-57-93. P-rewards={9: 55, 93: 3}. S: lobby-4-79. S-rewards={35: 4, 72: 46, 79: 39}.",
+    "input": "P: lobby-27-86-92-41. Prewards=[93:41 vs 41:39]. S: lobby-34-51-17. Srewards=[17:59 vs 89:97].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-40-5-16-83-51. P-rewards={7: 16, 31: 54, 51: 70}. S: lobby-35-97-41-11. S-rewards={11: 58, 56: 37, 82: 15}.",
+    "input": "P: lobby-10-69. Prewards=[69:32 vs 48:37]. S: lobby-65-34-17. Srewards=[9:21 vs 17:48].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-79-84-68-2. Prewards=[2:96 vs 17:20]. S: lobby-85-14-18-34. Srewards=[34:71 vs 16:35].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-46-65-24-14-57. P-rewards={38: 14, 39: 53, 57: 81, 73: 41}. S: lobby-56-62-23-29-86. S-rewards={15: 66, 43: 66, 86: 80}.",
+    "input": "P: lobby-27-88-82-34. Prewards=[41:99 vs 34:1]. S: lobby-33-7-12-82-55. Srewards=[55:43 vs 6:17].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-71-91-55-72-2. Prewards=[2:5 vs 22:75]. S: lobby-10-89. Srewards=[89:48 vs 76:71].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-47-6-46-27. Prewards=[77:20 vs 27:80]. S: lobby-86-14-46. Srewards=[58:31 vs 46:96].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-53-4-23. Prewards=[38:49 vs 23:90]. S: lobby-53-86-95-32. Srewards=[32:14 vs 22:5].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-97-71-62-94-33. P-rewards={24: 25, 33: 38}. S: lobby-100-52-5-3-81. S-rewards={49: 20, 81: 41, 88: 67, 92: 77}.",
+    "input": "P: lobby-45-40-30-29-4. Prewards=[10:66 vs 4:45]. S: lobby-52-43-36. Srewards=[42:52 vs 36:83].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-53-75-1-35-82. P-rewards={3: 8, 80: 40, 82: 65, 99: 23}. S: lobby-72-41-39. S-rewards={18: 33, 19: 44, 39: 96, 64: 19}.",
+    "input": "P: lobby-4-15-34-23. Prewards=[23:56 vs 51:66]. S: lobby-5-14-77-56. Srewards=[47:15 vs 56:78].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-4-88-12. P-rewards={7: 39, 12: 49, 14: 92, 25: 70}. S: lobby-34-23-74-57. S-rewards={22: 97, 57: 82, 77: 9, 86: 47}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-79-58-87-47. P-rewards={9: 63, 15: 54, 20: 37, 47: 17}. S: lobby-86-62. S-rewards={8: 81, 38: 20, 62: 51}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-77-90-89-76-73. P-rewards={33: 83, 73: 24}. S: lobby-41-90-75-3. S-rewards={3: 57, 13: 91, 74: 82}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-49-43. P-rewards={43: 67, 77: 49, 82: 43}. S: lobby-68-21-31-26. S-rewards={26: 31, 89: 41}.",
+    "input": "P: lobby-6-91-56-1. Prewards=[92:85 vs 1:80]. S: lobby-47-56-9. Srewards=[9:41 vs 46:16].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-63-11-37. P-rewards={37: 6, 53: 4}. S: lobby-15-62-90-42. S-rewards={30: 50, 42: 37, 46: 2}.",
+    "input": "P: lobby-86-53-42-52. Prewards=[94:23 vs 52:87]. S: lobby-71-17-25-54. Srewards=[54:96 vs 55:79].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-95-74. P-rewards={33: 17, 74: 87}. S: lobby-8-5-61-52. S-rewards={52: 94, 97: 98}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-45-11-68-32-16. P-rewards={16: 54, 72: 71, 89: 87}. S: lobby-4-58-13-30. S-rewards={30: 12, 53: 56, 55: 31, 96: 40}.",
+    "input": "P: lobby-39-37. Prewards=[37:60 vs 89:57]. S: lobby-56-75-78. Srewards=[78:57 vs 44:87].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-79-54-61-73. P-rewards={7: 38, 13: 56, 27: 26, 73: 50}. S: lobby-97-83. S-rewards={23: 98, 83: 66, 85: 12}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-96-22-4-59. P-rewards={45: 54, 55: 62, 59: 22}. S: lobby-84-3-71. S-rewards={66: 7, 71: 70}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-59-83. P-rewards={38: 94, 75: 57, 83: 97, 90: 82}. S: lobby-53-1. S-rewards={1: 30, 19: 33, 45: 50}.",
+    "input": "P: lobby-85-11-37. Prewards=[37:26 vs 44:4]. S: lobby-12-97-31-87. Srewards=[87:19 vs 32:6].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-93-68-78-50. P-rewards={17: 98, 50: 48, 87: 69}. S: lobby-44-37. S-rewards={37: 78, 61: 2, 70: 73}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-88-4-71. P-rewards={7: 59, 24: 28, 71: 49, 72: 51}. S: lobby-1-4-73-39-15. S-rewards={15: 68, 25: 28, 63: 23, 90: 12}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-72-34-12. P-rewards={12: 40, 67: 2, 91: 67}. S: lobby-23-40. S-rewards={5: 16, 40: 45, 52: 10}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-39-90. P-rewards={34: 3, 90: 75}. S: lobby-89-75. S-rewards={37: 4, 55: 28, 75: 27, 100: 16}.",
+    "input": "P: lobby-59-54. Prewards=[54:32 vs 67:84]. S: lobby-92-90-50. Srewards=[53:89 vs 50:19].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-78-79-59-26. P-rewards={3: 79, 26: 32, 98: 43}. S: lobby-43-6-36-11. S-rewards={11: 51, 41: 49}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-5-40-58-34-55. P-rewards={9: 54, 55: 60}. S: lobby-83-78. S-rewards={28: 16, 57: 76, 78: 56}.",
+    "input": "P: lobby-100-55. Prewards=[55:72 vs 62:16]. S: lobby-23-90-67. Srewards=[67:32 vs 7:59].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-96-99-86. P-rewards={11: 49, 86: 15}. S: lobby-50-27-23-4. S-rewards={2: 94, 4: 59, 8: 94, 81: 97}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-88-19-95-92. P-rewards={6: 49, 92: 40}. S: lobby-40-16-49. S-rewards={33: 84, 49: 92, 100: 17}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-84-31-100-60. P-rewards={3: 75, 16: 25, 60: 43}. S: lobby-2-35. S-rewards={32: 75, 35: 71, 46: 65, 64: 21}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-65-37. P-rewards={37: 10, 40: 39, 64: 96, 82: 18}. S: lobby-66-49. S-rewards={48: 62, 49: 47}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-15-78-4-93-58. P-rewards={37: 46, 58: 65, 61: 96}. S: lobby-87-17. S-rewards={17: 53, 62: 38, 90: 5}.",
+    "input": "P: lobby-97-57-79-93. Prewards=[62:82 vs 93:97]. S: lobby-71-58-21-96-61. Srewards=[35:36 vs 61:32].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-84-94-93-3-75. P-rewards={43: 45, 75: 64}. S: lobby-74-76-8-13-1. S-rewards={1: 11, 32: 45, 33: 98, 79: 66}.",
+    "input": "P: lobby-36-57-10. Prewards=[77:30 vs 10:18]. S: lobby-31-35-43-41. Srewards=[12:50 vs 41:20].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-54-53. Prewards=[53:50 vs 28:75]. S: lobby-70-60-54-8. Srewards=[58:90 vs 8:99].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-62-1-46-39-97. Prewards=[97:63 vs 85:35]. S: lobby-54-69-96-95-70. Srewards=[70:29 vs 30:56].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-11-88-77-10. P-rewards={10: 68, 24: 22, 54: 88}. S: lobby-21-63. S-rewards={3: 19, 45: 13, 63: 7, 96: 2}.",
+    "input": "P: lobby-93-22-60-17-80. Prewards=[80:4 vs 78:83]. S: lobby-51-76. Srewards=[76:11 vs 92:55].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-34-49. Prewards=[49:97 vs 54:33]. S: lobby-28-59-42-44. Srewards=[38:11 vs 44:54].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-73-68-11-97. P-rewards={97: 67, 98: 24}. S: lobby-36-78. S-rewards={2: 73, 15: 55, 78: 75, 95: 69}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-38-7-44. P-rewards={1: 16, 21: 74, 44: 3}. S: lobby-66-9-77-55. S-rewards={19: 68, 25: 11, 55: 76}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-59-12. P-rewards={9: 39, 12: 37, 25: 24, 66: 83}. S: lobby-15-4-5. S-rewards={5: 11, 34: 71, 48: 32, 79: 54}.",
+    "input": "P: lobby-45-29. Prewards=[29:32 vs 6:3]. S: lobby-100-84. Srewards=[84:26 vs 4:80].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-69-82-21-81. P-rewards={64: 52, 81: 30, 83: 36}. S: lobby-49-13-45. S-rewards={38: 17, 45: 39, 56: 13, 99: 14}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-46-6-15-59-39. P-rewards={7: 25, 39: 43, 53: 44, 64: 70}. S: lobby-5-59-76-72. S-rewards={25: 73, 72: 37, 78: 97}.",
+    "input": "P: lobby-73-28. Prewards=[83:15 vs 28:96]. S: lobby-90-33-99-48-22. Srewards=[22:92 vs 84:21].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-42-45. P-rewards={45: 55, 80: 43}. S: lobby-75-4-26-17. S-rewards={2: 28, 17: 50, 92: 12}.",
+    "input": "P: lobby-40-74. Prewards=[74:32 vs 96:90]. S: lobby-51-92-26-10-76. Srewards=[87:99 vs 76:14].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-15-78. P-rewards={23: 54, 59: 25, 74: 62, 78: 1}. S: lobby-8-99. S-rewards={39: 10, 99: 76}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-41-98-11-87. P-rewards={9: 38, 40: 11, 87: 11, 92: 56}. S: lobby-5-57-36. S-rewards={36: 55, 48: 99, 51: 19}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-57-75-33-44-59. P-rewards={17: 35, 36: 94, 45: 40, 59: 94}. S: lobby-81-78. S-rewards={62: 31, 78: 31}.",
+    "input": "P: lobby-73-6. Prewards=[10:2 vs 6:83]. S: lobby-69-55-85-48. Srewards=[48:44 vs 70:54].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-98-21-49. P-rewards={16: 85, 49: 39}. S: lobby-66-41-13-53-7. S-rewards={7: 16, 28: 95, 38: 58, 71: 95}.",
+    "input": "P: lobby-82-59-91-20. Prewards=[86:56 vs 20:62]. S: lobby-23-94-67-84-35. Srewards=[35:60 vs 74:94].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-3-33-94-48-85. P-rewards={19: 85, 85: 45, 96: 32}. S: lobby-48-57. S-rewards={57: 77, 62: 49}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-53-79-34-62-42. P-rewards={3: 43, 42: 1, 67: 40, 74: 4}. S: lobby-34-65. S-rewards={31: 70, 65: 13}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-13-36-64-33-96. P-rewards={29: 41, 51: 59, 63: 95, 96: 64}. S: lobby-88-32. S-rewards={7: 75, 11: 99, 32: 63, 70: 87}.",
+    "input": "P: lobby-12-36-58. Prewards=[84:4 vs 58:49]. S: lobby-97-60-73. Srewards=[73:44 vs 92:64].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-40-46-30-37-1. P-rewards={1: 1, 76: 60}. S: lobby-10-12. S-rewards={8: 64, 12: 85, 57: 12, 86: 11}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-19-98-35-18. P-rewards={18: 50, 49: 82, 93: 92}. S: lobby-37-47-98-29. S-rewards={21: 84, 28: 26, 29: 72, 96: 23}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-96-53-43-7. P-rewards={7: 42, 63: 26}. S: lobby-84-3. S-rewards={3: 92, 13: 31}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-90-26-62-80-40. P-rewards={23: 75, 40: 41, 88: 44, 98: 61}. S: lobby-20-61-72-60. S-rewards={3: 90, 6: 71, 60: 59, 73: 64}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-54-69-41-45-56. P-rewards={56: 59, 61: 6}. S: lobby-93-83. S-rewards={8: 2, 48: 53, 51: 36, 83: 33}.",
+    "input": "P: lobby-46-34-44. Prewards=[44:25 vs 2:31]. S: lobby-77-90-36-72. Srewards=[73:93 vs 72:11].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-93-98-85-24. P-rewards={24: 50, 35: 82, 61: 96, 76: 96}. S: lobby-99-32-37. S-rewards={37: 49, 44: 76}.",
+    "input": "P: lobby-89-61-83. Prewards=[83:32 vs 56:85]. S: lobby-58-3-12-38-29. Srewards=[98:75 vs 29:40].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-55-96-71-43. Prewards=[43:16 vs 33:25]. S: lobby-90-59-35-40. Srewards=[30:41 vs 40:93].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-25-28-95. Prewards=[95:13 vs 82:38]. S: lobby-36-93-76-98-68. Srewards=[68:25 vs 40:30].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-36-6-7. Prewards=[7:2 vs 67:37]. S: lobby-90-17-82-97. Srewards=[97:74 vs 16:61].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-33-62. Prewards=[62:74 vs 67:88]. S: lobby-9-52. Srewards=[11:7 vs 52:81].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-11-32-16-72. Prewards=[71:39 vs 72:58]. S: lobby-78-77-80-29-100. Srewards=[100:57 vs 53:76].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-100-50-7-32-16. P-rewards={9: 11, 16: 27}. S: lobby-96-68-64. S-rewards={4: 35, 47: 22, 48: 51, 64: 65}.",
+    "input": "P: lobby-79-95. Prewards=[95:34 vs 83:11]. S: lobby-98-27. Srewards=[29:21 vs 27:85].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-74-98-18. P-rewards={18: 86, 64: 67, 80: 83, 84: 11}. S: lobby-72-36-50-43-97. S-rewards={44: 11, 71: 19, 82: 47, 97: 47}.",
+    "input": "P: lobby-1-53-58. Prewards=[42:88 vs 58:59]. S: lobby-38-5-30-37-91. Srewards=[99:30 vs 91:10].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-11-86. P-rewards={16: 43, 39: 87, 52: 77, 86: 76}. S: lobby-93-27-68-48. S-rewards={48: 56, 91: 6}.",
+    "input": "P: lobby-55-15-70. Prewards=[21:40 vs 70:8]. S: lobby-83-20-35. Srewards=[10:77 vs 35:22].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-57-16-60-89. Prewards=[76:77 vs 89:57]. S: lobby-90-52-35-65. Srewards=[70:6 vs 65:11].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-41-82-48. P-rewards={24: 88, 39: 99, 48: 59, 84: 37}. S: lobby-86-45. S-rewards={28: 41, 45: 49}.",
+    "input": "P: lobby-4-12-30-87. Prewards=[87:6 vs 38:97]. S: lobby-98-87. Srewards=[78:23 vs 87:98].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-24-75-56-82. Prewards=[46:43 vs 82:14]. S: lobby-12-61-45-53-43. Srewards=[43:21 vs 96:53].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-98-71-5-59-12. Prewards=[12:1 vs 57:70]. S: lobby-33-42-15-99. Srewards=[99:85 vs 74:60].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-80-97-64-81. Prewards=[81:57 vs 18:63]. S: lobby-98-7-27-35-71. Srewards=[41:16 vs 71:90].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-91-21-40. Prewards=[12:16 vs 40:15]. S: lobby-71-53. Srewards=[53:60 vs 31:83].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-66-91-35-54. Prewards=[53:96 vs 54:77]. S: lobby-61-32-59-71-19. Srewards=[19:66 vs 26:18].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-5-82-49-75. P-rewards={16: 97, 68: 59, 75: 94, 76: 74}. S: lobby-25-96-97. S-rewards={80: 18, 97: 17}.",
+    "input": "P: lobby-44-65-35-1-37. Prewards=[21:45 vs 37:69]. S: lobby-76-75-85-63. Srewards=[64:43 vs 63:62].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-32-8. P-rewards={3: 84, 8: 76, 31: 41, 54: 97}. S: lobby-57-13-86-36-51. S-rewards={22: 7, 51: 70, 53: 19, 73: 24}.",
+    "input": "P: lobby-42-25-90-31-74. Prewards=[74:50 vs 68:84]. S: lobby-30-100-53-6-41. Srewards=[41:85 vs 56:20].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-13-57-68-59. Prewards=[59:20 vs 55:61]. S: lobby-93-19. Srewards=[90:34 vs 19:10].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-26-74-13-59-18. P-rewards={17: 17, 18: 92, 77: 15, 91: 15}. S: lobby-44-68-85-84-35. S-rewards={7: 22, 35: 22, 55: 92, 82: 97}.",
+    "input": "P: lobby-43-87. Prewards=[73:31 vs 87:80]. S: lobby-41-81-92-98-63. Srewards=[63:9 vs 5:81].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-83-6-22. P-rewards={22: 12, 27: 29}. S: lobby-13-30. S-rewards={30: 45, 55: 95, 62: 64}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-16-71-77-25. P-rewards={25: 87, 64: 32, 78: 82, 99: 51}. S: lobby-39-19-2-68-28. S-rewards={26: 35, 28: 43, 55: 43, 79: 54}.",
+    "input": "P: lobby-96-12-56. Prewards=[94:89 vs 56:57]. S: lobby-98-82. Srewards=[82:22 vs 14:39].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-97-2-92-76-70. P-rewards={56: 50, 70: 29, 84: 63, 93: 88}. S: lobby-86-21. S-rewards={21: 31, 43: 99, 55: 89, 83: 91}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-41-9-53-61-71. P-rewards={60: 59, 71: 71, 78: 99, 83: 33}. S: lobby-37-75. S-rewards={42: 51, 66: 33, 75: 16}.",
+    "input": "P: lobby-38-46. Prewards=[46:88 vs 58:22]. S: lobby-56-19-32-68. Srewards=[80:23 vs 68:24].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-44-78-25-40-39. P-rewards={39: 81, 89: 27}. S: lobby-78-13. S-rewards={13: 21, 66: 50}.",
+    "input": "P: lobby-64-75-19. Prewards=[62:60 vs 19:86]. S: lobby-60-82-33. Srewards=[33:2 vs 35:37].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-47-43-99. P-rewards={38: 90, 99: 5}. S: lobby-54-48-94. S-rewards={40: 49, 53: 73, 94: 34}.",
+    "input": "P: lobby-45-76-39-82-55. Prewards=[68:74 vs 55:31]. S: lobby-59-39-26-50. Srewards=[14:46 vs 50:49].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-18-36-49-58-12. P-rewards={12: 26, 30: 38, 42: 70}. S: lobby-21-52-35. S-rewards={27: 58, 35: 19, 98: 62, 100: 77}.",
+    "input": "P: lobby-3-85-51-36. Prewards=[8:37 vs 36:96]. S: lobby-73-88. Srewards=[88:64 vs 83:30].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-15-88-75-51. P-rewards={30: 71, 51: 82, 54: 36}. S: lobby-53-99-61-67. S-rewards={11: 50, 22: 86, 67: 36}.",
+    "input": "P: lobby-80-33-87. Prewards=[6:75 vs 87:57]. S: lobby-81-13-83. Srewards=[83:5 vs 43:47].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-61-19-80. P-rewards={15: 26, 48: 46, 78: 37, 80: 44}. S: lobby-65-61-46-49. S-rewards={11: 15, 49: 28, 67: 16, 79: 4}.",
+    "input": "P: lobby-42-96-54-23. Prewards=[74:33 vs 23:35]. S: lobby-17-70-47. Srewards=[47:22 vs 71:62].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-73-36-26-55. P-rewards={55: 29, 67: 15, 71: 68}. S: lobby-30-62-6-16-82. S-rewards={13: 51, 82: 86}.",
+    "input": "P: lobby-15-60-10-19. Prewards=[77:2 vs 19:12]. S: lobby-87-93-51. Srewards=[51:51 vs 50:34].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-38-39-8. P-rewards={8: 44, 14: 56}. S: lobby-24-12. S-rewards={12: 58, 37: 75, 47: 27}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-3-4. P-rewards={4: 40, 24: 61, 74: 76}. S: lobby-64-98-41-80. S-rewards={31: 73, 80: 60}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-94-39-92-57. P-rewards={51: 45, 57: 5, 72: 20}. S: lobby-88-47. S-rewards={7: 86, 38: 90, 47: 50, 74: 2}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-27-93-76-92-66. P-rewards={18: 87, 46: 90, 66: 40}. S: lobby-36-93-10-59. S-rewards={59: 91, 62: 48, 64: 30}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-1-9. P-rewards={9: 6, 68: 65, 83: 73}. S: lobby-78-76-52. S-rewards={31: 73, 52: 49}.",
-    "output": "S"
-  },
-  {
-    "input": "Two paths P and S with numbered stops: P: lobby-74-85. P-rewards={20: 89, 46: 46, 85: 52, 100: 35}. S: lobby-3-81-70-86-27. S-rewards={22: 33, 26: 6, 27: 43, 96: 19}.",
+    "input": "P: lobby-75-49-82-48. Prewards=[48:80 vs 64:42]. S: lobby-87-30. Srewards=[30:72 vs 4:79].",
     "output": "P"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-53-26-43. P-rewards={6: 93, 34: 62, 43: 17, 92: 97}. S: lobby-81-3-1-90-16. S-rewards={16: 95, 38: 25}.",
+    "input": "P: lobby-90-39-84-53-15. Prewards=[15:13 vs 69:69]. S: lobby-6-5-39. Srewards=[39:31 vs 18:18].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-6-85-86-31. P-rewards={28: 68, 31: 30, 60: 6, 70: 54}. S: lobby-57-91-20-22. S-rewards={22: 44, 25: 76}.",
+    "input": "P: lobby-76-96-94-20-54. Prewards=[54:5 vs 55:48]. S: lobby-63-79. Srewards=[37:28 vs 79:89].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-59-71-29-79-34. P-rewards={34: 29, 66: 14, 74: 52}. S: lobby-76-71-51-43-54. S-rewards={54: 89, 58: 73, 83: 24, 93: 91}.",
+    "input": "P: lobby-13-88-48-70. Prewards=[18:28 vs 70:12]. S: lobby-8-51-36-25. Srewards=[66:83 vs 25:85].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-70-50-4-94. P-rewards={20: 32, 94: 22}. S: lobby-28-61-18-84. S-rewards={3: 56, 27: 31, 69: 54, 84: 32}.",
+    "input": "P: lobby-43-32. Prewards=[76:30 vs 32:76]. S: lobby-73-27-9. Srewards=[29:43 vs 9:28].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-36-19. Prewards=[15:2 vs 19:4]. S: lobby-70-33-23. Srewards=[23:17 vs 91:46].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-90-64-25-59-97. P-rewards={5: 75, 66: 68, 78: 60, 97: 6}. S: lobby-100-43. S-rewards={37: 35, 43: 25}.",
+    "input": "P: lobby-3-23-34-7. Prewards=[17:47 vs 7:61]. S: lobby-95-54-68. Srewards=[68:58 vs 11:66].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-79-6-94. Prewards=[66:14 vs 94:55]. S: lobby-59-83-4-8. Srewards=[8:88 vs 55:63].",
     "output": "S"
   },
   {
-    "input": "Two paths P and S with numbered stops: P: lobby-88-43-22. P-rewards={22: 23, 48: 27, 57: 47}. S: lobby-86-38. S-rewards={29: 53, 38: 67, 71: 2, 94: 1}.",
+    "input": "P: lobby-42-78. Prewards=[78:75 vs 85:92]. S: lobby-9-17-36. Srewards=[88:42 vs 36:71].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-59-65-78-56. Prewards=[56:99 vs 89:93]. S: lobby-90-15. Srewards=[91:28 vs 15:71].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-44-59-52-54-94. Prewards=[42:20 vs 94:33]. S: lobby-41-55. Srewards=[55:48 vs 93:88].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-12-56. Prewards=[49:76 vs 56:72]. S: lobby-96-95. Srewards=[18:72 vs 95:8].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-46-86-97-55-93. Prewards=[93:14 vs 41:65]. S: lobby-37-77. Srewards=[77:74 vs 49:28].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-45-72. Prewards=[30:80 vs 72:72]. S: lobby-15-98-36-74. Srewards=[59:79 vs 74:99].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-4-24-35-90. Prewards=[21:9 vs 90:85]. S: lobby-44-45-1-24. Srewards=[80:19 vs 24:52].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-96-68. Prewards=[44:93 vs 68:48]. S: lobby-49-54-59. Srewards=[21:42 vs 59:40].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-7-20. Prewards=[20:35 vs 90:85]. S: lobby-97-80-7. Srewards=[7:57 vs 12:55].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-28-97-66-15. Prewards=[15:63 vs 93:86]. S: lobby-56-15-37-87. Srewards=[87:68 vs 81:40].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-1-27. Prewards=[37:1 vs 27:42]. S: lobby-28-99-18-98. Srewards=[98:16 vs 43:64].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-69-91-30-65-72. Prewards=[72:59 vs 60:41]. S: lobby-10-51-95-6. Srewards=[6:10 vs 3:74].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-38-15-52-3-42. Prewards=[51:32 vs 42:56]. S: lobby-80-59-89. Srewards=[13:56 vs 89:14].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-40-96-44-29-43. Prewards=[16:45 vs 43:66]. S: lobby-10-66-82. Srewards=[75:45 vs 82:25].",
+    "output": "P"
+  },
+  {
+    "input": "P: lobby-31-14-19. Prewards=[19:23 vs 91:81]. S: lobby-26-23-78-20. Srewards=[10:64 vs 20:99].",
+    "output": "S"
+  },
+  {
+    "input": "P: lobby-88-73-83-82-80. Prewards=[9:39 vs 80:57]. S: lobby-81-41-20-57. Srewards=[57:81 vs 65:36].",
     "output": "S"
   }
 ]

@@ -11,7 +11,7 @@ os.environ.setdefault("TRANSFORMERS_CACHE", "/lambda/nfs/microsoft-rips2025/pzha
 
 MODEL_NAME = "microsoft/phi-4-reasoning"
 
-def make_save_root(model_name: str) -> Path:
+def make_save_root(model_name):
     ts = time.strftime("%Y%m%d_%H%M%S")
     root = Path("/lambda/nfs/microsoft-rips2025/pzhang") / "phi4_r_attn_by_layer_head" / f"{model_name.replace('/', '_')}_{ts}"
     root.mkdir(parents=True, exist_ok=True)
@@ -100,7 +100,7 @@ def dump_attentions_by_layer_head(
     model,
     input_ids: torch.Tensor,
     save_root,
-    save_dtype: torch.dtype = torch.float16,  # change to float32 if you prefer exact values
+    save_dtype: torch.dtype = torch.float16,
 ):
     """
     Runs one forward pass with output_attentions=True.
@@ -349,7 +349,7 @@ if __name__ == "__main__":
     reply, embeddings, output_ids = generate_with_outputs(
         sys_prompt,
         user_prompt,
-        max_new_tokens=512,
+        max_new_tokens=1024,
     )
     print(f"System prompt: {sys_prompt}\nUser prompt: {user_prompt}\nAssistant reply: {reply}")
 

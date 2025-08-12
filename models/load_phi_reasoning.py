@@ -9,11 +9,11 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 os.environ.setdefault("HF_HOME", "/lambda/nfs/microsoft-rips2025/pzhang/.cache/")
 os.environ.setdefault("TRANSFORMERS_CACHE", "/lambda/nfs/microsoft-rips2025/pzhang/.cache/")
 
-MODEL_NAME = "microsoft/phi-4"
+MODEL_NAME = "microsoft/phi-4-reasoning"
 
 def make_save_root(model_name: str) -> Path:
     ts = time.strftime("%Y%m%d_%H%M%S")
-    root = Path("/lambda/nfs/microsoft-rips2025/pzhang") / "phi4_attn_by_layer_head" / f"{model_name.replace('/', '_')}_{ts}"
+    root = Path("/lambda/nfs/microsoft-rips2025/pzhang") / "phi4_r_attn_by_layer_head" / f"{model_name.replace('/', '_')}_{ts}"
     root.mkdir(parents=True, exist_ok=True)
     return root
 
@@ -392,5 +392,4 @@ if __name__ == "__main__":
     for layer, info in specific_attentions.items():
         print(f" Layer {layer}: Attention from final token ('{info['query_token']}') to {info['key_tokens']}:")
         print(f" Scores: {info['scores']}")
-
 

@@ -1,0 +1,113 @@
+[(1, 2), (1, 3), (1, 4), (2, 4), (3, 5), (4, 6)]
+
+Undirected graph (n=6)
+  diameter:                 4
+  edge density:             0.4
+  tree-width (min degree):  2
+  avg clustering coeff.:    0.27777777777777773
+  avg shortest path len.:   1.9333333333333333
+[(1, 2), (1, 3), (1, 5), (1, 8), (1, 10), (2, 3), (2, 5), (3, 4), (3, 5), (3, 7), (3, 8), (4, 8), (5, 6), (5, 7), (5, 8), (6, 8), (6, 9), (6, 10), (7, 9)]
+
+Undirected graph (n=10)
+  diameter:                 3
+  edge density:             0.4222222222222222
+  tree-width (min degree):  4
+  avg clustering coeff.:    0.44333333333333336
+  avg shortest path len.:   1.6888888888888889
+[(1, 2), (1, 3), (1, 5), (1, 10), (1, 14), (2, 3), (2, 4), (2, 7), (2, 9), (2, 11), (2, 14), (3, 5), (3, 8), (3, 14), (4, 5), (4, 6), (4, 7), (4, 9), (4, 10), (4, 11), (4, 12), (4, 13), (5, 8), (5, 9), (5, 10), (5, 12), (6, 7), (6, 8), (6, 9), (6, 12), (7, 8), (7, 9), (7, 11), (7, 12), (7, 14), (8, 10), (8, 13), (9, 10), (9, 11), (9, 13), (9, 14), (10, 14), (11, 14), (13, 14)]
+
+Undirected graph (n=14)
+  diameter:                 3
+  edge density:             0.4835164835164835
+  tree-width (min degree):  6
+  avg clustering coeff.:    0.5026077097505669
+  avg shortest path len.:   1.5274725274725274
+[(1, 2), (1, 3), (1, 4), (1, 5), (1, 7), (1, 8), (1, 9), (1, 12), (2, 3), (2, 6), (2, 13), (2, 17), (2, 18), (3, 4), (3, 9), (3, 10), (3, 15), (3, 16), (4, 8), (4, 12), (4, 15), (4, 18), (5, 6), (5, 8), (5, 10), (5, 11), (5, 12), (5, 13), (5, 18), (6, 7), (6, 13), (6, 15), (6, 16), (6, 18), (7, 10), (7, 12), (7, 14), (7, 15), (8, 17), (8, 18), (9, 15), (9, 16), (10, 11), (10, 17), (11, 14), (11, 15), (11, 17), (12, 13), (12, 14), (12, 18), (13, 14), (13, 17), (14, 15), (15, 17), (16, 17), (16, 18), (17, 18)]
+
+Undirected graph (n=18)
+  diameter:                 3
+  edge density:             0.37254901960784315
+  tree-width (min degree):  8
+  avg clustering coeff.:    0.33015873015873015
+  avg shortest path len.:   1.6470588235294117
+[(1, 2), (1, 5), (1, 8), (1, 10), (1, 11), (1, 15), (1, 18), (1, 19), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 11), (2, 15), (2, 16), (2, 20), (3, 5), (3, 7), (3, 16), (3, 17), (3, 18), (3, 20), (3, 22), (4, 6), (4, 9), (4, 12), (4, 14), (4, 16), (4, 18), (4, 19), (4, 22), (5, 8), (5, 11), (5, 14), (5, 15), (5, 22), (6, 9), (6, 10), (6, 11), (6, 13), (6, 14), (6, 19), (6, 20), (7, 10), (7, 11), (7, 12), (7, 13), (7, 14), (7, 17), (7, 19), (7, 21), (8, 10), (8, 11), (8, 12), (8, 15), (9, 13), (9, 14), (9, 16), (9, 17), (9, 19), (9, 20), (9, 22), (10, 18), (10, 19), (11, 13), (11, 17), (11, 18), (12, 13), (12, 15), (12, 17), (12, 19), (12, 20), (13, 22), (14, 20), (14, 21), (15, 17), (15, 20), (15, 21), (16, 18), (16, 19), (16, 20), (17, 18), (17, 19), (17, 22), (18, 19), (19, 21)]
+
+Undirected graph (n=22)
+  diameter:                 3
+  edge density:             0.38095238095238093
+  tree-width (min degree):  11
+  avg clustering coeff.:    0.3720582447855174
+  avg shortest path len.:   1.632034632034632
+[(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 1)]
+
+
+
+
+*************************************************************
+the tree decompoisiton is not a tree bc there is cycle: 
+ Let's break down the problem step by step.
+
+Step 1: Identify the vertices (nodes) in the graph.
+
+From the description, we have the following nodes:
+
+* G
+* R
+* D
+* W
+* J
+* L
+
+Step 2: Identify the edges in the graph.
+
+From the description, we have the following edges:
+
+* G -> R
+* G -> D
+* G -> W
+* W -> D
+* W -> J
+* R -> L
+
+Step 3: Find a tree decomposition of the graph.
+
+A tree decomposition is a tree where each node represents a subset of vertices from the original graph. We need to find a tree decomposition that satisfies the following conditions:
+
+* Each edge in the original graph is contained in at least one bag.
+* For each vertex v in the original graph, the subgraph induced by the bags containing v is a connected subtree of the tree decomposition.
+
+One possible tree decomposition is:
+
+* Root node: {G, R, D, W, J, L}
+* Child node 1: {G, D, W}
+* Child node 2: {R, L}
+* Child node 3: {W, J}
+
+Each edge in the original graph is contained in at least one bag:
+
+* G -> R is contained in the bag {G, R, D, W, J, L}
+* G -> D is contained in the bag {G, D, W}
+* G -> W is contained in the bag {G, D, W}
+* W -> D is contained in the bag {G, D, W}
+* W -> J is contained in the bag {W, J}
+* R -> L is contained in the bag {R, L}
+
+For each vertex v in the original graph, the subgraph induced by the bags containing v is a connected subtree of the tree decomposition:
+
+* For vertex G, the bags containing G are {G, R, D, W, J, L} and {G, D, W}. The subgraph induced by these bags is a connected subtree.
+* For vertex R, the bags containing R are {G, R, D, W, J, L} and {R, L}. The subgraph induced by these bags is a connected subtree.
+* For vertex D, the bags containing D are {G, D, W} and {G, R, D, W, J, L}. The subgraph induced by these bags is a connected subtree.
+* For vertex W, the bags containing W are {G, D, W}, {W, J}, and {G, R, D, W, J, L}. The subgraph induced by these bags is a connected subtree.
+* For vertex J, the bags containing J are {W, J} and {G, R, D, W, J, L}. The subgraph induced by these bags is a connected subtree.
+* For vertex L, the bags containing L are {R, L} and {G, R, D, W, J, L}. The subgraph induced by these bags is a connected subtree.
+
+Step 4: Find the maximum bag size in the tree decomposition.
+
+The maximum bag size in this tree decomposition is 5, which occurs in the root node {G, R, D, W, J, L}.
+
+Step 5: Calculate the treewidth of the graph.
+
+The treewidth of a graph is one less than the minimum, over all tree decompositions, of the maximum bag size in that decomposition. In this case, the minimum maximum bag size is 5, so the treewidth is 4.
+
+Therefore, the treewidth of the graph is 4. 
+

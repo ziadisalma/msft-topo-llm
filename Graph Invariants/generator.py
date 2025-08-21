@@ -43,11 +43,11 @@ def generate_connected_graph(
 
     # 1) Build a spanning structure that guarantees connectivity
     if mode == "undirected":
-        # Create a random spanning tree
+       
         for v in range(2, n_nodes + 1):
             u = rng.randint(1, v - 1)
             edges.add(tuple(sorted((u, v))))
-    else:  # directed or mixed → use a directed cycle 1→2→…→n→1
+    else:  # directed or mixed 
         for v in range(1, n_nodes):
             edges.add((v, v + 1))
         edges.add((n_nodes, 1))
@@ -59,18 +59,14 @@ def generate_connected_graph(
                 if mode == "undirected":
                     edges.add(tuple(sorted((u, v))))
                 elif mode == "directed":
-                    # choose a random orientation
                     edges.add((u, v) if rng.random() < 0.5 else (v, u))
                 else:  # mixed
                     if rng.random() < 0.5:
-                        # single directed
                         edges.add((u, v) if rng.random() < 0.5 else (v, u))
                     else:
-                        # double-directed
                         edges.add((u, v))
                         edges.add((v, u))
 
-    # 3) Return as a sorted list for readability
     return sorted(edges)
 
 def generate_binary_tree(
@@ -102,14 +98,14 @@ def generate_binary_tree(
 
     rng = rng or random
     edges: List[Edge] = []
-    children_count = {1: 0}  # track number of children assigned so far
+    children_count = {1: 0}  
 
     for child in range(2, n_nodes + 1):
         # pick a parent that still has < 2 children
         possible_parents = [p for p, c in children_count.items() if c < 2]
         parent = rng.choice(possible_parents)
         children_count[parent] += 1
-        children_count[child] = 0  # new node ready for future children
+        children_count[child] = 0  
 
         if as_directed:
             edges.append((parent, child))
@@ -153,8 +149,3 @@ if __name__ == "__main__":
             G = build_graph(edges, mode if mode != "mixed" else "undirected")
             report_metrics(G, f"{mode.capitalize()} graph (n={n})")
 
-
-
-# ---------binary tree ------------------
-    #print("\nBinary tree (n=10):")
-    #print(generate_binary_tree(10, rng=rng))

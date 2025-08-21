@@ -1,23 +1,23 @@
-# pip install transformers accelerate torch --upgrade
+
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch, re, statistics
 
-# ------------------------------ SETUP ------------------------------
+
 model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 tokenizer.pad_token = tokenizer.eos_token 
 model = AutoModelForCausalLM.from_pretrained(
 	model_id,
-    	torch_dtype=torch.bfloat16,   # saves VRAM; use float16 if needed
+    	torch_dtype=torch.bfloat16,  
     	device_map="auto"
 )
 
 model.config.pad_token_id = tokenizer.pad_token_id 
 
-k_runs   = 10          # how many completions you want
+k_runs   = 10         
 temperature = 0.5      
-truth = 1              # correct room number for this toy graph
+truth = 1              
 
 prompt = (
     """Imagine a world with rooms. From the lobby you have two choices, room 1 and room 2.
@@ -28,7 +28,7 @@ a chest with 50 dollars. You return to the lobby. Which room will you choose to 
 most money? Only return room number""" 
 )
 
-# ------------------------------ LOOP ------------------------------
+
 gen_tok_list = []
 
 for _ in range(k_runs):
@@ -52,11 +52,11 @@ for _ in range(k_runs):
 		pad_token_id=tokenizer.pad_token_id,
     	)[0]
 
-	gen_ids = output_ids[input_ids.shape[-1]:]          # strip prompt
+	gen_ids = output_ids[input_ids.shape[-1]:]         
 	reply   = tokenizer.decode(gen_ids, skip_special_tokens=False)
 	print(reply)
 	gen_tok_list.append(len(gen_ids))
-# ------------------------------ REPORT ------------------------------
+
 
 avg_tokens = statistics.mean(gen_tok_list)-1
 

@@ -3,7 +3,7 @@ import torch, re, statistics
 
 MODEL_ID = "meta-llama/Meta-Llama-3-8B-Instruct"
 
-# ---------- load model & tokenizer ----------
+
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 tokenizer.pad_token = tokenizer.eos_token
 
@@ -13,7 +13,7 @@ model = AutoModelForCausalLM.from_pretrained(
 	device_map="auto",
 )
 
-# ---------- helper that talks to the model ----------
+
 
 def chat(messages, temperature=0.5):
 	input_ids = tokenizer.apply_chat_template(
@@ -37,7 +37,7 @@ def chat(messages, temperature=0.5):
 	num_new_tokens = len(gen_ids)
 	return text, num_new_tokens
 
-# ---------- the two user turns ----------
+
 
 BASE_PROMPT = (
     "Imagine a world with 4 rooms. From the lobby you have two choices, room 1 and room 2.\n"
@@ -55,15 +55,15 @@ You return to the lobby. Which room do you choose to make the most rewards? Give
 
 SYSTEM_MSG = {"role": "system", "content": "You are a concise, accurate planner."}
 
-# ---------- run a few times ----------
 
-K = 10  # how many repeat runs
+
+K = 10 
 new_token_counts = []
 
 for _ in range(K):
 	convo = [SYSTEM_MSG, {"role": "user", "content": BASE_PROMPT}]
 
-    # reward re‑valuation turn
+    
 	convo.append({"role": "user", "content": REVAL_PROMPT})
 	answer, n_tokens = chat(convo, temperature=0.5)
 	print(answer)

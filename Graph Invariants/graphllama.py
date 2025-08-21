@@ -3,7 +3,7 @@ import torch, re, statistics
 import json
 MODEL_ID = "meta-llama/Meta-Llama-3-8B-Instruct"
 
-# ---------- load model & tokenizer ----------
+
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 tokenizer.pad_token = tokenizer.eos_token
 
@@ -12,7 +12,7 @@ model = AutoModelForCausalLM.from_pretrained(
         torch_dtype=torch.bfloat16,
         device_map="auto",
 )
-# ---------- helper that talks to the model ----------
+
 
 def chat(messages, temperature=0.5):
         input_ids = tokenizer.apply_chat_template(
@@ -36,7 +36,7 @@ def chat(messages, temperature=0.5):
         num_new_tokens = len(gen_ids)
         return text, num_new_tokens
 
-# ---------- the two user turns ----------
+
 
 prompt = """Imagine you are in a hotel with rooms denotated by letters and connected by two way doors. Room G is connected to room R, room D, and room W. Room W is also connected to room D and room J. Room R is also connected to room L.
 """
@@ -53,9 +53,9 @@ convo = [
     {"role": "user", "content": definition},
     {"role": "user", "content": "Let's think step by step."}
 ]
-# ---------- run a few times ----------
 
-K = 10  # how many repeat runs
+
+K = 10  
 new_token_counts = []
 
 for _ in range(K):
